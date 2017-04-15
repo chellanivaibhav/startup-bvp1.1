@@ -38,14 +38,21 @@
 			COMPANY NAME<!-- it  will  be an mage  -->
 		</div>
 		<div class="col-md-6" ><!-- navbar 2nd box right -->
+			
 			<div class="dropdowntop">
-				<button class="dropbtntop"><b>Dropdown</b></button>
+				<button class="dropbtntop"><b>MENU</b></button>
 				<div class="dropdowntop-content">
 					<a href="#">HOME</a>
-					<a href="#">CONTACT</a>
-					<a href="#">ABOUT</a>
+					<a href="#about">ABOUT</a>
+					<a href="#contact">CONTACT</a>
+					<a href="#">LOG IN</a>
+					<a href="#">LOG OUT</a>
 				</div>
 			</div>
+			<div class="trial1" style="float: right;">
+				<button  class="dropbtntop signin" >SIGN UP</button>
+			</div>
+			
 		</div>
 	</div>
 	
@@ -53,29 +60,29 @@
 	<div id="engineouter"><!-- simple outer box -->
 		<div id="engineinner"><!-- it still exist and and color changed to white -->
 			<div  class="row "><!-- simple innner box it is  --><!-- there was a trybox containing background image and css still contain it   -->
-				<div class="col-md-4"><!-- gif image of house box -->
-					<!-- <img src="i1.gif" class="img-responsive"> -->
+				<div class="col-md-4">
 					
 				</div>
-				<div class="col-md-8"><!-- this is the searching and sort dropdown-->
+				<div class="col-md-4"><!-- this is the searching and sort dropdown-->
 					<div>
 						<form action="search.php" method="POST">
-							<div class="dropdownbox1"><!--distance dropdown box it is  -->
-								<div class="dropdown">
-									<select name="Distance From College">
-										<option value="1-3 km">1-3 km</option>
-										<option value="3-5 km">3-5 km</option>
-										<option value="5-7 km">5-7 km</option>
+							<div class="dropdownbox1 "><!--distance dropdown box it is  -->
+								<div class="dropdown ">
+									<select name="Distance">
+										<option value="3">1-3 km</option>
+										<option value="5">3-5 km</option>
+										<option value="7">5-7 km</option>
 
 										
 									</select>
 									
 								</div>
 							</div>
+							
 							<div class="dropdownbox2"><!--budget dropdown box it is  -->
 								<div class="dropdown">
-									<button class="dropbtn">BUDGET</button>
-									<select name="GENDER">
+									
+									<select name="Gender">
 										<option value="Any">Any</option>
 										<option value="Male">Male</option>
 										<option value="Female">Female</option>
@@ -83,22 +90,35 @@
 									
 								</div>
 							</div>
-							
-							<input type="submit" name="SUBMIT">
-						</form>
-						<h2>OR</h2>
-						<hr>
-					</div>
-					<div>
-						<div class="searchbox"><!-- this is searching box -->
-							<form class="navbar-form navbar-left" role="search">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search">
+							<div class="dropdownbox3"><!--budget dropdown box it is  -->
+								<div class="dropdown">
+									
+									<select name="Budget">
+										<option value="4<">4000<</option>
+										<option value="4+">4000+</option>
+										<option value="5+">5000+</option>
+									</select>
+									
 								</div>
-								<button type="submit" class="btn btn-default">Submit</button>
-							</form>
+							</div>
+							<div class="submitbutton">
+								<input type="submit" name="SUBMIT">
+							</div>
+						</form>
+						<h2 style="font-size: 22px; font-weight: bold; margin-left:45%;">OR</h2>
+						
+						<div>
+							<button class="btn btn-block">
+								post your 
+							</button>
 						</div>
 					</div>
+					<div>
+						
+					</div>
+				</div>
+				<div class="col-md-4">
+					
 				</div>
 				<!-- <input type="text" name="search" placeholder="Search.."> -->
 			</div>
@@ -210,16 +230,31 @@
 	</div>
 	<!-- END HERE THIS -->
 	<!-- about us -->
-	<div><!-- difference box-->
-				<p class="make_differ_text" style="margin-bottom: 20px">ABOUT US</p>
-			</div>
+	<div><!-- about box-->
+	<a name="about"><hr></a>
+		<p class="make_differ_text" style="margin-bottom: 20px">ABOUT US</p>
+	</div>
 	<div class="aboutus">
 		
 		<p>
-			this is the required we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfsbf sddnsdf .this is the rthdhjsdfsd fsdhfhjdf sdfshddfbs dfsddfgsdf fshddfsdf sduuiehr ewriuwehrdmnfsbf sddnsdf .this is the required we hhfb sd  me  nfsbf sddnsdf .this is the Sdfs df sdeq uireefed we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfsbf sdf sddf sdd  dnsdf .this is the required we hhfb sdmnfsbf sddnsdf .
+			ABOUT US
+			this is the required we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfsbf sddnsdf .this is the <br> rthdhjsdfsd fsdhfhjdf sdfshddfbs dfsddfgsdf fshddfsdf sduuiehr ewriuwehrdmnfsbf sddnsdf .this is the required we hhfb sd  me  nfsbf sddnsdf .this is the Sd <br> dfb <br> dfjd <br>fs df sdeq uireefed we hhfb sdmnfsbf sddnsdf .this is the required we hhfb sdmnfs <br> j df <br> bf sddnsdf .this is the required we hhfb sdmnfsbf sdf sddf sdd  dnsdf .this is the required we hhfb sdmnfsbf sddnsdf .
 		</p>
 	</div>
 	<!-- about  us end here -->
+
+	<!-- contact us start -->
+	<div><!-- contact box-->
+	<a name="contact"><hr></a>
+		<p class="make_differ_text" style="margin-bottom: 20px">CONTACT US</p>
+	
+	<div class="col-md-6">
+		this <br> sjkdfsd <br> dskfjsd <br> sdjfjjds <br> dfsjdf <br> sdfs <br> dfjdd <br> djfdf <br> dfkjs <br> ddfkj <br> d <br> dfb <br> dfjd <br>fs dd <br> dfb <br> dfjd <br>fs dd <br> dfb <br> dfjd <br>fs dd <br> dfb <br> dfjd <br>fs dd <br> dfb <br> dfjd <br>fs dd <br> dfb <br> dfjd <br>fs dd <br> dfb <br> dfjd <br>fs d
+	</div>
+	</div>
+	<!-- contact us end here -->			
+
+
 	<div class="footer"><!-- footer box -->
 		<p class="footertext">footer page@2017</p>
 		<div class="sharebox"><!-- share box   -->
@@ -252,6 +287,19 @@
 					});
 				});
 			</script>
+
+			<script>$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});</script>
 
 			<script>
 				var slideIndex = 1;
