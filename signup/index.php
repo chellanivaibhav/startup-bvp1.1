@@ -66,7 +66,7 @@
       		}
       		elseif($user==0 && $passwordinput==1) {
       			//makes sql statement contaning email and password to check if //user exists
-      			$sql=$conn->prepare("SELECT * FROM user_details where user_email='$EmailORUsername'");
+      			$sql=$conn->prepare("SELECT * FROM user_details where user_email='$EmailORUsername'");k
       			$sql->execute();
 
       			$sqlResult=$sql->fetch(PDO::FETCH_ASSOC);
