@@ -1,6 +1,12 @@
+body{
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+}
 .navbar {
     margin-bottom: 0;
-    background-color: #6F1EF4;
+   // background-color: #6F1EF4;
+    background-color: black;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -11,11 +17,13 @@
 }
 
 .navbar li a, .navbar .navbar-brand {
+   
     color: #fff !important;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #6F1EF4 !important;
+   // color: #6F1EF4 !important;
+    color: black !important;
     background-color: #FCFAFF !important;
     font-size: 16px;
 }
@@ -31,10 +39,11 @@
     color: black;
 
     background: #6F1EF4; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#6F1EF4, #EAE5F1); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#6F1EF4, #EAE5F1); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#6F1EF4, #EAE5F1); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#6F1EF4, #EAE5F1); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(black, #EAE5F1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, #EAE5F1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, #EAE5F1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, #EAE5F1); /* Standard syntax */
+
 
     height: 250px;
   
@@ -95,18 +104,18 @@ float:left;
 
 .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #6F1EF4;
+      color: black;
   }
   .carousel-indicators li {
-      border-color: #6F1EF4;
+      border-color: black;
   }
   .carousel-indicators li.active {
-      background-color: #6F1EF4;
+      background-color: black;
   }
 
 
   .logo-small {
-      color: #6F1EF4;
+      color: black;
       font-size: 100px;
   }
   input[type=submit]{
@@ -146,7 +155,7 @@ input[type=text]:hover {
 
 
 .footer{
-    background-color: #6F1EF4;
+    background-color: black;
    
     width: 100%;
 
@@ -194,3 +203,4 @@ input[type=text]:hover {
         -webkit-transform: translateY(0%);
     }
 }
+//icon scrolling end
