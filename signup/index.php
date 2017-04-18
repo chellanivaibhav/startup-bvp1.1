@@ -3,17 +3,52 @@
 <head>
 	<meta charset="utf-8" />
 	<title>SIGN IN</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+            .username{
+                  font-size: 22px;
+                  width: 80%;
+                  padding: 12px 0px;
+                  margin: 10px 25px;
+                  box-sizing: border-box;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+            }
+            .submitbutton{
+                  margin-left: 40px;
+                  margin-bottom: 10px;
 
-	<!-- Our CSS stylesheet file -->
-	<!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
+            }
+            .box{
+                  margin-top: 10%;
+                  border: solid;
+                  border-radius: 10px;
+                  margin-top: 
+            }
+            .newuserbutton{
+                  margin-top: 10px;
+                  margin-left: 30px;
+                  margin-right: ;
+            }
+      </style>
+      <!-- Our CSS stylesheet file -->
+      <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
 
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
           <![endif]-->
-      </head>
+    </head>
 
-      <body>
-      	<div>
+    <body>      
+    <div class="row">
+            <div class="col-sm-4">
+                  
+            </div>
+      	<div class="box col-sm-4">
       		<?php require '../php/connToDB.php';?>
       		<?php 
       		$EmailORUsername=$Password="";
@@ -86,17 +121,29 @@
       		?>
       		<span><?php echo $universalERR;?></span>
       		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      			<input type="text" name="EmailORUsername" placeholder="Enter Email or Username" value=""><?php echo $EmailORUsernameERR; ?><br>
-      			<input type="password" name="Password" placeholder="Enter password" value=""><?php echo $PasswordERR; ?><br><br>
-      			<input type="submit" name="Submit">
+      			<input type="text" class="username" name="EmailORUsername" placeholder="Enter Email or Username" value=""><?php echo $EmailORUsernameERR; ?><br>
+      			<input type="password" class="username" name="Password" placeholder="Enter password" value=""><?php echo $PasswordERR; ?><br><br>
+      			<input type="submit" class="submitbutton btn btn-success btn-lg" name="Submit">
       		</form>
       		<?php echo $EmailORUsername. " " .$Password ; ?>
       	</div>
-      	<div>
-      		<form method="POST" action="../php/signup.php">
-      			<input type="submit" name="Submit" value="new users">
-      		</form>
-      	</div>
+            <div class="col-sm-4">
+                  
+            </div>
+      </div>
+      <div class="row">
+      <div class="col-sm-4">
+            
+      </div>
+      <div class="col-sm-4">
+          <form method="POST" action="../php/signup.php">
+               <input type="submit" class=" newuserbutton btn btn-primary btn-lg" name="Submit" value="new users">
+         </form>
+   </div>
+   <div class="col-sm-4">
+         
+   </div>
+   </div>
 		<!-- <div id="formContainer">
 			<form id="login" method="post" action="./">
 				<a href="#" id="flipToRecover" class="flipLink">Forgot?</a>
