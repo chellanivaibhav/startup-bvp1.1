@@ -42,7 +42,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="row">
+		<div class="row container-fluid">
 		<div class="col-sm-4">
 			
 		</div>
