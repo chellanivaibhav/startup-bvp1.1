@@ -11,6 +11,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <style>
             body{
+                  background-color: #DCE0E0;
                   overflow-x: hidden;
             }
             .username{
@@ -28,16 +29,27 @@
 
             }
             .box{
-                  margin-top: 10%;
+                  margin-top: 3%;
                   border: solid;
-                  border-radius: 10px;
+                  border-color: #6F6F6F;
+                  border-radius: 5px;
                   margin-top: 
             }
-            .newuserbutton{
-                  margin-top: 10px;
-                  margin-left: 10px;
-                  margin-right: ;
+            .box1{
+                  border: solid;
+                  border-radius: 5px;
+                  margin-top:  10px;
+                  border-color: #6F6F6F;
+                  background-color: white;
             }
+            .box1 span{
+                  font-size: 26px;
+            }
+            .box1 a{
+                  font-size: 22px;
+            }
+            
+            
       </style>
       <!-- Our CSS stylesheet file -->
       <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
@@ -47,12 +59,15 @@
           <![endif]-->
     </head>
 
-    <body>      
-    <div class="row container-fluid">
+    <body>  
+    <div class="text-center" style="margin-top: 70px;">
+          <h2>Sign in to "company"</h2>
+    </div>    
+    <div class="row container-fluid" >
             <div class="col-sm-4">
                   
             </div>
-      	<div class="box col-sm-4">
+      	<div class="box col-sm-4" style="background-color: white;">
       		<?php require '../php/connToDB.php';?>
       		<?php 
       		$EmailORUsername=$Password="";
@@ -135,13 +150,15 @@
                   
             </div>
       </div>
-      <div class="row">
+      <div class="row container-fluid">
       <div class="col-sm-4">
             
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 box1" style="float: left;">
+           
           <form method="POST" action="../php/signup.php">
-               <a href="http://localhost/startup-bvp1.1/php/signup.php"><input type="submit" class=" newuserbutton btn btn-primary btn-lg" name="Submit" value="new users"></a>
+           <span>&nbsp;&nbsp;Create account here :-</span>
+               <a href="http://localhost/startup-bvp1.1/php/signup.php" style="text-decoration: none;">&nbsp;  &nbsp;  New Users</a>
          </form>
    </div>
    <div class="col-sm-4">
