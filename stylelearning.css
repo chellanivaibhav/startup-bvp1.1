@@ -45,7 +45,7 @@ body{
     background: linear-gradient(black, #EAE5F1); /* Standard syntax */
 
 
-    height: 250px;
+    height: 580px;
   
 
 }
@@ -56,11 +56,22 @@ body{
     margin-top: 20%;
 
 }
+/*filter dropdown it is*/
 .dropdownbox1{
 margin-left: 10px;
+
 margin-bottom: 10px;
 margin-top: 20px;
 float:left;
+}
+
+.xyz{
+     background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .make_differ_text{
@@ -147,7 +158,8 @@ input[type=text]:hover {
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: none;
+    border-bottom: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     resize: none;
@@ -168,7 +180,7 @@ input[type=text]:hover {
     padding-top: 1%;
 }
 
-//icon scrolling
+
 
 .slideanim {visibility:hidden;}
 .slide {
@@ -203,4 +215,5 @@ input[type=text]:hover {
         -webkit-transform: translateY(0%);
     }
 }
-//icon scrolling end
+
+

@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="home.ico" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -50,7 +51,7 @@
 			<form action="search.php" method="POST">
 				<div class="dropdownbox1 "><!--distance dropdown box it is  -->
 					<div class="dropdown ">
-						<select name="Distance">
+						<select name="Distance" class="btn btn-default xyz" ><!-- xyz for  styling -->
 							<option value="3">1-3 km</option>
 							<option value="5">3-5 km</option>
 							<option value="7">5-7 km</option>
@@ -62,8 +63,8 @@
 				<div class="dropdownbox1"><!-- gender dropdown it is -->
 					<div class="dropdown">
 
-						<select name="Gender">
-							<option value="Any">Any</option>
+						<select name="Gender" class="btn btn-default xyz"><!-- xyz for  styling -->
+							<option value="Any">Gender : Any</option>
 							<option value="Male">Male</option>
 							<option value="Female">Female</option>
 						</select>
@@ -73,7 +74,7 @@
 				<div class="dropdownbox1"><!--budget dropdown box it is  -->
 					<div class="dropdown">
 
-						<select name="Budget">
+						<select name="Budget" class="btn btn-default xyz"><!-- xyz for  styling -->
 							<option value="4<">4000<</option>
 							<option value="4+">4000+</option>
 							<option value="5+">5000+</option>
@@ -261,7 +262,7 @@
 
 	<!-- why use this  end here -->
 	<a name="about"></a>
-	<div class="row "  style="margin-top: 50px;">
+	<div class="row "  style="margin-top: 50px; margin-bottom: 50px;">
 		<div class="col-sm-4 text-center">
 			<h3 style="color: black"><b>ABOUT US</b></h3>
 		</div>
@@ -277,8 +278,8 @@
 	<div class="row slideanim">
 
 		<div class="col-md-6 inputcontact" >
-		<a name="contact"></a>
-		<h3 class="text-center">CONTACT</h3>
+			<a name="contact"></a>
+			<h3 class="text-center">CONTACT</h3>
 			<form>
 				<label for="fname">NAME</label>
 				<input type="text" id="fname" name="fname" placeholder="NAME">
@@ -304,8 +305,8 @@
 	<div class="footer container-fluid"><!-- footer box -->
 		<p class="footertext">Footer Page@2017</p>
 		
-				</div>
-			
+	</div>
+
 	<!-- footer end  here -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
@@ -346,15 +347,15 @@
 <script>
 	
 	$(window).scroll(function() {
-  $(".slideanim").each(function(){
-    var pos = $(this).offset().top;
+		$(".slideanim").each(function(){
+			var pos = $(this).offset().top;
 
-    var winTop = $(window).scrollTop();
-    if (pos < winTop + 600) {
-      $(this).addClass("slide");
-    }
-  });
-});
+			var winTop = $(window).scrollTop();
+			if (pos < winTop + 600) {
+				$(this).addClass("slide");
+			}
+		});
+	});
 </script>
 <!-- scroll it above js end -->
 
