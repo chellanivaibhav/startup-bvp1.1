@@ -1,6 +1,53 @@
 
 <!-- for validating form  -->
-<?php 
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>SignUp</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="hom.ico" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+		<style>
+			 body{
+                  overflow-x: hidden;
+            }
+			.submitbutton{
+				  margin-top: 20px;
+                  margin-left: 20px;
+                  margin-bottom: 10px;
+
+            }
+			.username{
+                  font-size: 22px;
+                  width: 80%;
+                  padding: 12px 0px;
+                  margin: 10px 25px;
+                  box-sizing: border-box;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+            }
+
+			.box{
+                  margin-top: 10%;
+                  border: solid;
+                  border-radius: 10px;
+                  margin-top: 
+            }
+		</style>
+	</head>
+	<body>
+		<div class="row">
+		<div class="col-sm-4">
+			
+		</div>
+		<div class="box col-sm-4">
+			<?php 
 require 'connToDB.php';
 $universal="";
 $usernameERR=$passwordERR=$emailERR=$phoneNoERR="";
@@ -60,23 +107,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		}
 	}
 	?>
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>SignUp</title>
-	</head>
-	<body>
-		<div>
 			<?php echo $universal ; ?><br>
 			<!-- forms to be styled -->
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ;?>"> 
-				<input type="text" name="username" placeholder="username"><?php echo $usernameERR; ?><br>
-				<input type="text" name="email" placeholder="email"><?php echo $emailERR;?><br>
-				<input type="text" name="phoneNo" placeholder="Phone Number"><?php echo $phoneNoERR;?><br>
-				<input type="password" name="password" placeholder="Password"><?php echo $passwordERR;?><br>
-				<input type="submit" name="signup" value="Sign Up">
+				<input type="text" class="username" name="username" placeholder="username"><?php echo $usernameERR; ?><br>
+				<input type="text" class="username" name="email" placeholder="email"><?php echo $emailERR;?><br>
+				<input type="text" class="username" name="phoneNo" placeholder="Phone Number"><?php echo $phoneNoERR;?><br>
+				<input type="password" class="username" name="password" placeholder="Password"><?php echo $passwordERR;?><br>
+				<input type="submit" class="submitbutton btn btn-success btn-lg"  name="signup" value="Sign Up">
 			</form>
 			<?php  echo $username." ".$password . " ". $email." ". $phoneNo ;?>
+		</div>
+		<div class="col-sm-4">
+			
+		</div>
 		</div>
 	</body>
 	</html>
