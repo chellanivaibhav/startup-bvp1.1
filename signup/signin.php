@@ -23,7 +23,7 @@
                   border-bottom: 2px solid #ccc;
             }
             .submitbutton{
-                  margin-left: 40px;
+                  margin-left: 20px;
                   margin-bottom: 10px;
 
             }
@@ -35,7 +35,7 @@
             }
             .newuserbutton{
                   margin-top: 10px;
-                  margin-left: 30px;
+                  margin-left: 10px;
                   margin-right: ;
             }
       </style>
@@ -48,7 +48,7 @@
     </head>
 
     <body>      
-    <div class="row">
+    <div class="row container-fluid">
             <div class="col-sm-4">
                   
             </div>
@@ -141,7 +141,7 @@
       </div>
       <div class="col-sm-4">
           <form method="POST" action="../php/signup.php">
-               <input type="submit" class=" newuserbutton btn btn-primary btn-lg" name="Submit" value="new users">
+               <a href="http://localhost/startup-bvp1.1/php/signup.php"><input type="submit" class=" newuserbutton btn btn-primary btn-lg" name="Submit" value="new users"></a>
          </form>
    </div>
    <div class="col-sm-4">
