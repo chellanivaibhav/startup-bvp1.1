@@ -3,6 +3,7 @@ body{
         overflow-x: hidden;
         overflow-y: scroll;
 }
+/*this is navbar styling*/
 .navbar {
     margin-bottom: 0;
    // background-color: #6F1EF4;
@@ -32,7 +33,7 @@ body{
     border-color: transparent;
     color: #fff !important;
 }
-
+/*this is filter content */
 
 .box{
     margin-top: 50px;
@@ -45,7 +46,7 @@ body{
     background: linear-gradient(black, #EAE5F1); /* Standard syntax */
 
 
-    height: 250px;
+    height: 580px;
   
 
 }
@@ -56,18 +57,30 @@ body{
     margin-top: 20%;
 
 }
+/*filter dropdown it is*/
 .dropdownbox1{
 margin-left: 10px;
+
 margin-bottom: 10px;
 margin-top: 20px;
 float:left;
 }
 
+.xyz{
+     background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/*make differ , testominal heading*/
+
 .make_differ_text{
   text-align: center; font-size: 250%; color: black; 
   font-family: 'Baloo Bhaina', cursive;
   
-
+/*this is the js where no are  starting inc*/
 }
 .differ_border{
     border-style: solid;
@@ -101,7 +114,7 @@ float:left;
 
 }
 
-
+/*testimianl part*/
 .carousel-control.right, .carousel-control.left {
       background-image: none;
       color: black;
@@ -147,13 +160,14 @@ input[type=text]:hover {
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: none;
+    border-bottom: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     resize: none;
 }
 
-
+/*footer background*/
 .footer{
     background-color: black;
    
@@ -168,8 +182,8 @@ input[type=text]:hover {
     padding-top: 1%;
 }
 
-//icon scrolling
 
+/*css part for slide element*/
 .slideanim {visibility:hidden;}
 .slide {
     /* The name of the animation */
@@ -203,4 +217,5 @@ input[type=text]:hover {
         -webkit-transform: translateY(0%);
     }
 }
-//icon scrolling end
+
+
