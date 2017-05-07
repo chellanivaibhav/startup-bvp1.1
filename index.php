@@ -1,3 +1,4 @@
+<?php echo "welcome"; ?>
 <!DOCTYPE html>
 <html>
 <head>
