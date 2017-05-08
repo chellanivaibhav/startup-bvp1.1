@@ -9,6 +9,18 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+
+<script> 
+$(function() {
+$("#includedContent").load("../navbar.html"); 
+}); 
+</script>
+<script> 
+      $(function() {
+         $("#includedfooter").load("../footer.html"); 
+      }); 
+   </script>
       <style>
             body{
                   background-color: #DCE0E0;
@@ -33,7 +45,7 @@
                   border: solid;
                   border-color: #6F6F6F;
                   border-radius: 5px;
-                  margin-top: 
+                  padding-bottom: 10px;
             }
             .box1{
                   border: solid;
@@ -60,6 +72,11 @@
     </head>
 
     <body>  
+    <!-- navbar start -->
+    <div id="includedContent" style="margin-bottom: 150px;">
+       
+    </div>
+    <!-- navbar end -->
     <div class="text-center" style="margin-top: 70px;">
           <h2>Sign in to "company"</h2>
     </div>    
