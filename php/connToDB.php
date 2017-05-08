@@ -3,7 +3,7 @@
  <?php
 	$servername="localhost";
 	$username="root";
-	$password="astrokick";
+	$password="12345";
 	$dbname="trial_startup";
 	try {
 		$conn=new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);

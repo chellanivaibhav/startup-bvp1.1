@@ -62,7 +62,7 @@ body{
 margin-left: 10px;
 
 margin-bottom: 10px;
-margin-top: 20px;
+margin-top: 100px;
 float:left;
 }
 
@@ -99,8 +99,8 @@ float:left;
 .differ_text{
    text-align: center; 
    font-size: 150%; 
-   color: #6A3442;
-
+   color: black;
+   font-weight: bold;
   font-family: 'Baloo Bhaina', cursive; 
 }
 .differ_no{
