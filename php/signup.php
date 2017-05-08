@@ -43,6 +43,9 @@ $("#includedContent").load("../navbar.html");
                   border: none;
                   border-bottom: 2px solid #ccc;
             }
+            .username:focus{
+            	 outline: 0;
+            }
 
 			.box{
                   margin-top: 10%;
