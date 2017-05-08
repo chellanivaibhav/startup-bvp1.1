@@ -35,6 +35,9 @@ $("#includedContent").load("../navbar.html");
                   border: none;
                   border-bottom: 2px solid #ccc;
             }
+            .username:focus{
+              outline: 0; 
+            }
             .submitbutton{
                   margin-left: 20px;
                   margin-bottom: 10px;
