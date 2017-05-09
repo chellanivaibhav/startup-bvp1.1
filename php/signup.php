@@ -12,22 +12,42 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+      
 
-<script> 
-$(function() {
-$("#includedContent").load("../navbar.html"); 
-}); 
-</script>
-<script> 
-		$(function() {
-			$("#includedfooter").load("../footer.html"); 
-		}); 
-	</script>
+
 		<style>
 			 body{
                   overflow-x: hidden;
             }
+             .navbar {
+    margin-bottom: 0;
+   // background-color: #6F1EF4;
+    background-color: black;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.navbar li a, .navbar .navbar-brand {
+   
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+   // color: #6F1EF4 !important;
+    color: black !important;
+    background-color: #FCFAFF !important;
+    font-size: 16px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
 			.submitbutton{
 				  margin-top: 20px;
                   margin-left: 20px;
@@ -58,7 +78,27 @@ $("#includedContent").load("../navbar.html");
 	</head>
 	<body>
 	<!-- navbar start -->
-	 <div id="includedContent"></div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#myPage">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+				
+					<li><a href="../learning.php">HOME</a></li>
+					<li><a href="../signup/signin.php">SIGN IN</a></li>
+					<li><a href="signup.php">SIGN UP</a></li>
+					<li><a href="#contact">LOG OUT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<!-- navbar ended -->
 		<div class="row container-fluid">
 		<div class="col-sm-4">
@@ -141,9 +181,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		</div>
 		</div>
 		<!-- navbar start -->
-		<div id="includedfooter">
-			
-		</div>
+		
 		<!-- navbar ended -->
 	</body>
 	</html>
