@@ -12,33 +12,23 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylelearning.css">
-
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	<script> 
+		$(function() {
+			$("#includednavbar").load("navbar.html"); 
+		}); 
+	</script>
+	<script> 
+		$(function() {
+			$("#includedfooter").load("footer.html"); 
+		}); 
+	</script>
 </head>
 
 <body>
 
 	<!-- navbar start -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>                        
-				</button>
-				<a class="navbar-brand" href="#myPage">Logo</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about">ABOUT</a></li>
-					<li><a href="#contact">CONTACT</a></li>
-					<li><a href="#portfolio">LOG IN</a></li>
-					<li><a href="#pricing">SIGNUP</a></li>
-					<li><a href="#contact">LOG OUT</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<div id="includednavbar"></div>
 	<!-- navbar ended -->
 
 	<!-- this is the input start form   -->
@@ -87,15 +77,6 @@
 					<input type="submit" name="SUBMIT">
 				</div>
 			</form>
-			<h2>OR</h2>
-
-			<div>
-			<!-- have to change this button to submit type to open php file  -->
-				<!-- <button class="btn btn-default">
-					POST YOUR PROPERTY
-				</button> -->
-				<form method="POST" action="php/postyourproperty.php"><input type="submit" name="submit" value="POST YOUR PROPERTY"></form>
-			</div>
 		</div>
 		<div class="col-sm-4">
 
@@ -305,11 +286,9 @@
 
 
 	<!-- footer start -->
-	<div class="footer container-fluid"><!-- footer box -->
-		<p class="footertext">Footer Page@2017</p>
+	<div id="includedfooter">
 		
 	</div>
-
 	<!-- footer end  here -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
