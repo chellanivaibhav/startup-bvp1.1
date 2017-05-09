@@ -11,7 +11,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylelearning.css">
-	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
 <body>
@@ -31,8 +32,8 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#about">ABOUT</a></li>
 					<li><a href="#contact">CONTACT</a></li>
-					<li><a href="signup/signin.php">LOG IN</a></li>
-					<li><a href="php/signup.php">SIGNUP</a></li>
+					<li><a href="signup/signin.php">SIGN IN</a></li>
+					<li><a href="php/signup.php">SIGN UP</a></li>
 					<li><a href="#contact">LOG OUT</a></li>
 				</ul>
 			</div>
@@ -268,16 +269,17 @@
 
 	<!-- contact -->
 	<div class="row slideanim">
-
+		<br><br><a name="contact"></a>
 		<div class="col-md-6 inputcontact" >
-			<a name="contact"></a>
+
+			
 			<h3 class="text-center">CONTACT</h3>
 			<form>
 				<label for="fname">NAME</label>
 				<input type="text" id="fname" name="fname" placeholder="NAME " style="outline: 0;">
 				
 				<label for="email">EMAIL ID</label>
-				<input type="text" id="lname" name="email" placeholder="XYZ@ABC.com" style="outline: 0;">
+				<input type="text" id="lname" name="email" placeholder="xyz@abc.com" style="outline: 0;">
 				<label for="email">MESSAGE</label>
 				<textarea placeholder="say something" class="messagetext" style="outline: 0;"></textarea>
 				<div>
@@ -294,20 +296,39 @@
 
 
 	<!-- footer start -->
-	<div id="includedfooter">
-		
-	</div>
+	<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="https://www.facebook.com/tuskibansal"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/mynetwork/"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/anonymous043044/startup-bvp1.1"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#about">About</a>
+					·
+					<a href="#contact">Contact</a>
+					·
+					<a href="#signup/signin.php">Sign In</a>
+					·
+					<a href="#">Sign Up</a>
+					
+				</p>
+
+				<p>Company Name &copy; 2015</p>
+			</div>
+
+		</footer>
 	<!-- footer end  here -->
 
 
-	<!-- script to add navbar and footer -->
-
-	<script> 
-		$(function() {
-			$("#includedfooter").load("footer.html"); 
-		}); 
-	</script>
-	<!-- script end here -->
 
 
 
