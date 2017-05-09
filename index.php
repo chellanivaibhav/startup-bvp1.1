@@ -12,36 +12,47 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylelearning.css">
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
-	<script> 
-		$(function() {
-			$("#includednavbar").load("navbar.html"); 
-		}); 
-	</script>
-	<script> 
-		$(function() {
-			$("#includedfooter").load("footer.html"); 
-		}); 
-	</script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
 <body>
 
 	<!-- navbar start -->
-	<div id="includednavbar"></div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand" href="#myPage">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+					<li><a href="signup/signin.php">SIGN IN</a></li>
+					<li><a href="php/signup.php">SIGN UP</a></li>
+					<li><a href="#contact">LOG OUT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<!-- navbar ended -->
 
 	<!-- this is the input start form   -->
 	
 	<div class="row box">
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-6">
 
 			<form action="php/search.php" method="POST">
-				<div class="dropdownbox1 "><!--distance dropdown box it is  -->
-					<div class="dropdown ">
+				<!--distance dropdown box it is  -->
+					<div class="dropdown dropdownbox1 ">
 						<select name="Distance" class="btn btn-default xyz" ><!-- xyz for  styling -->
 							<option value="3">1-3 km</option>
 							<option value="5">3-5 km</option>
@@ -49,10 +60,10 @@
 						</select>
 
 					</div>
-				</div>
+				
 
-				<div class="dropdownbox1"><!-- gender dropdown it is -->
-					<div class="dropdown">
+				<!-- gender dropdown it is -->
+					<div class="dropdown dropdownbox1">
 
 						<select name="Gender" class="btn btn-default xyz"><!-- xyz for  styling -->
 							<option value="Any">Gender : Any</option>
@@ -61,9 +72,9 @@
 						</select>
 
 					</div>
-				</div>
-				<div class="dropdownbox1"><!--budget dropdown box it is  -->
-					<div class="dropdown">
+				
+				<!--budget dropdown box it is  -->
+					<div class="dropdown dropdownbox1">
 
 						<select name="Budget" class="btn btn-default xyz"><!-- xyz for  styling -->
 							<option value="4<">4000<</option>
@@ -72,14 +83,13 @@
 						</select>
 
 					</div>
-				</div>
+			
 				<div class="dropdownbox1">
-					<input type="submit" name="SUBMIT">
+					<input type="submit" name="SUBMIT" class=" btn" style="background-color: #C44242; color: white; margin: 3px; border-style: none; padding: 10px;">
 				</div>
-			</form>
+			</form> 
 		</div>
-		<div class="col-sm-4">
-
+		<div class="col-sm-4">3
 		</div>
 	</div>
 	<!-- this is input form end  -->
@@ -260,18 +270,19 @@
 
 	<!-- contact -->
 	<div class="row slideanim">
-
+		<br><br><a name="contact"></a>
 		<div class="col-md-6 inputcontact" >
-			<a name="contact"></a>
+
+			
 			<h3 class="text-center">CONTACT</h3>
 			<form>
 				<label for="fname">NAME</label>
-				<input type="text" id="fname" name="fname" placeholder="NAME">
+				<input type="text" id="fname" name="fname" placeholder="NAME " style="outline: 0;">
 				
 				<label for="email">EMAIL ID</label>
-				<input type="text" id="lname" name="email" placeholder="XYZ@ABC.com">
+				<input type="text" id="lname" name="email" placeholder="xyz@abc.com" style="outline: 0;">
 				<label for="email">MESSAGE</label>
-				<textarea placeholder="say something" class="messagetext"></textarea>
+				<textarea placeholder="say something" class="messagetext" style="outline: 0;"></textarea>
 				<div>
 					<input type="submit" name="SUBMIT">
 				</div>
@@ -286,10 +297,41 @@
 
 
 	<!-- footer start -->
-	<div id="includedfooter">
-		
-	</div>
+	<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="https://www.facebook.com/tuskibansal"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/mynetwork/"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/anonymous043044/startup-bvp1.1"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#about">About</a>
+					·
+					<a href="#contact">Contact</a>
+					·
+					<a href="#signup/signin.php">Sign In</a>
+					·
+					<a href="#">Sign Up</a>
+					
+				</p>
+
+				<p>Company Name &copy; 2015</p>
+			</div>
+
+		</footer>
 	<!-- footer end  here -->
+
+
+
+
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> 
@@ -309,7 +351,7 @@
 
 
 	<!-- srcipt of easy scroll -->
-	<script>$('a[href*="#"]:not([href="#"])').click(function() {
+<script>$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');

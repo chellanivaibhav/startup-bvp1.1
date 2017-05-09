@@ -1,0 +1,87 @@
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left:  auto;	margin-right: auto;	border-style: solid;border-width: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.details{
+	padding-top: 7px;
+}
+.contact{
+	padding-top: 7px;
+}
+
+	@media  screen  and (min-width:550px){
+		
+		.address{
+			width: 75%;	font-size: 20px;
+		}
+		.goto{
+			width: 25%;	font-size: 20px;
+		}
+		#container2 , #container3{
+			border-style: solid;border-width: 1px;	width: 100%;
+
+		}
+		.rent{
+			width: 30%;	padding-left: 40px;	height: 50px;
+		}
+		.details{
+			width: 40%;	text-align: center;	height: 50px;
+		}
+		.contact{
+			width: 30%;	text-align: center;	height: 50px;
+		}
+		.image{
+			width: 60%;height: 200px;border-style: solid;border-width: 1px;
+		}
+		.seats{
+			width: 40%;height: 200px;border-style: solid;border-width: 1px;
+		}
+
+		}
+	@media screen and (max-width: 550px){
+		#container3{
+			width: 100%;
+			order: -1;
+		}
+		.image{
+			width: 100%;height: 200px;border-style: solid;border-width: 1px;
+		}
+		.seats{
+			width: 100%;height: 30px;border-style: solid;border-width: 1px;
+		}
+		.address{
+			width: 75%;	font-size: 20px;
+		}
+		#container1{
+			width: 50%
+			order:0;
+			border-style: solid;border-width: 1px;	width: 100%;
+		}
+		#container2{
+			width: 50%;
+			order:1;
+			border-style: solid;border-width: 1px;	width: 100%;
+		}
+		.goto{
+			width: 25%;	font-size: 20px;
+		}
+		.rent{
+			width: 33.333%;height: 50px;
+		}
+		.details{
+			width: 33.333%;height: 50px;
+
+		}
+		.contact{
+			width: 33.333%;height: 50px;
+		}
+	}	
+
+
