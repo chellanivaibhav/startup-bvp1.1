@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
 
 	<!-- navbar start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -34,7 +34,7 @@
 					<li><a href="#contact">CONTACT</a></li>
 					<li><a href="signup/signin.php">SIGN IN</a></li>
 					<li><a href="php/signup.php">SIGN UP</a></li>
-					<li><a href="#contact">LOG OUT</a></li>
+					<li><a href="#">LOG OUT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
 				</div>
 			</form> 
 		</div>
-		<div class="col-sm-4">3
+		<div class="col-sm-4">
 		</div>
 	</div>
 	<!-- this is input form end  -->
@@ -255,7 +255,8 @@
 
 	<!-- why use this  end here -->
 	<a name="about"></a>
-	<div class="row "  style="margin-top: 50px; margin-bottom: 50px;">
+	
+		<div class="row "  style="margin-top: 50px; margin-bottom: 50px;" id="about">
 		<div class="col-sm-4 text-center">
 			<h3 style="color: black"><b>ABOUT US</b></h3>
 		</div>
@@ -266,10 +267,12 @@
 			this s dsfskjdf sdkjfbdsjkf sdkfbkjsdf sdkfjbsdjkf sjdf <br> ddfsdfjsdd sdkjfbsjdkf kffjsdfsd fsddkfjsdfs f sddkfjsddfsd fksddjfsf sdbr	 sdkfb tb btn <br> ddkfjsdf sdkfjbsdjfsd fsdkfjsdf <br> dskfjsddf  dfdskjfsjdkfs <br> 	 .
 		</div>
 	</div>
-
+	
 	<!-- contact -->
-	<div class="row slideanim">
-		<br><br><a name="contact"></a>
+	<div id="contact">
+	<br> <br>
+	<div class="row slideanim" >
+		<a name="contact"></a>
 		<div class="col-md-6 inputcontact" >
 
 			
@@ -283,7 +286,7 @@
 				<label for="email">MESSAGE</label>
 				<textarea placeholder="say something" class="messagetext" style="outline: 0;"></textarea>
 				<div>
-					<input type="submit" name="SUBMIT">
+					<a href="mailto:tuskibansal@gmail.com"><input type="submit" name="SUBMIT"></a>
 				</div>
 			</form>
 		</div>
@@ -291,6 +294,7 @@
 			<h3>OUR MOTO</h3> 
 			<p>ssdjs sjdsd ssjdhasj ssjdhas  <br> sjd jsadbasd </p>
 		</div>
+	</div>
 	</div>
 	<!-- contact end here -->
 
@@ -316,13 +320,13 @@
 					·
 					<a href="#contact">Contact</a>
 					·
-					<a href="#signup/signin.php">Sign In</a>
+					<a href="signup/signin.php">Sign In</a>
 					·
-					<a href="#">Sign Up</a>
+					<a href="php/signup.php">Sign Up</a>
 					
 				</p>
 
-				<p>Company Name &copy; 2015</p>
+				<p>Company Name &copy; 2017</p>
 			</div>
 
 		</footer>
@@ -351,6 +355,7 @@
 
 	<!-- srcipt of easy scroll -->
 <script>$('a[href*="#"]:not([href="#"])').click(function() {
+		 if( $(this).attr("href")=="#myCarousel") return;//This is the exception
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -365,7 +370,7 @@
 </script>
 <!-- script of easy scroll end -->
 
-<!-- scroll it above js -->
+<!-- scroll it above js ( slideanim ) -->
 
 <script>
 	
@@ -374,6 +379,7 @@
 			var pos = $(this).offset().top;
 
 			var winTop = $(window).scrollTop();
+
 			if (pos < winTop + 600) {
 				$(this).addClass("slide");
 			}
@@ -381,6 +387,9 @@
 	});
 </script>
 <!-- scroll it above js end -->
+
+<!-- trial -->
+<!-- trial end -->
 
 </body>
 </html>

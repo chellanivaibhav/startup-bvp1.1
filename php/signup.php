@@ -21,7 +21,7 @@
             }
              .navbar {
     margin-bottom: 0;
-   // background-color: #6F1EF4;
+   
     background-color: black;
     z-index: 9999;
     border: 0;
@@ -68,11 +68,31 @@
             }
 
 			.box{
-                  margin-top: 10%;
+                 
                   margin-bottom: 4%;
                   border: solid;
                   border-radius: 10px;
                   padding-bottom: 1%;
+            }
+            @media  screen  and (min-width:750px){
+            	.box{
+            		 margin-top: 10%;
+            		 width: 40%;
+
+            	}
+            }
+             @media  screen  and (min-width:850px){
+            	.box{
+            		 margin-top: 10%;
+            		 width: 33.3%;
+
+            	}
+            }
+            @media  screen  and (max-width:750px){
+            		 .box{
+            		 	margin-top: 20%;
+            		 }
+
             }
 		</style>
 	</head>
