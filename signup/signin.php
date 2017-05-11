@@ -69,22 +69,47 @@
                   border-color: #6F6F6F;
                   border-radius: 5px;
                   padding-bottom: 10px;
+                  margin-left: auto;
+                  margin-right: auto;
             }
             .box1{
+              margin-left: auto;
+                  margin-right: auto;
+              width: 33.3%;
                   border: solid;
                   border-radius: 5px;
                   margin-top:  10px;
                   border-color: #6F6F6F;
                   background-color: white;
             }
-            .box1 span{
-                  font-size: 26px;
+            
+            @media  screen  and (min-width:750px){
+              .box1{
+                margin-left: auto;
+                  margin-right: auto;
+              width: 33.3%;
+              }
+              .box1 span{
+                  font-size: 20px;
             }
             .box1 a{
-                  font-size: 22px;
+                  font-size: 18px;
             }
-            
-            
+
+            }
+             @media  screen  and (max-width:750px){
+              .box1{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .box1 span{
+                  font-size: 20px;
+            }
+            .box1 a{
+                  font-size: 18px;
+            }
+             }
       </style>
       <!-- Our CSS stylesheet file -->
       <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
@@ -198,7 +223,7 @@
       		?>
       		<span><?php echo $universalERR;?></span>
       		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      			<input type="text" class="username" name="EmailORUsername" placeholder="Enter Email or Username" value=""><?php echo $EmailORUsernameERR; ?><br>
+      			<input type="text" class="username" name="EmailORUsername" placeholder="Enter Email " value=""><?php echo $EmailORUsernameERR; ?><br>
       			<input type="password" class="username" name="Password" placeholder="Enter password" value=""><?php echo $PasswordERR; ?><br><br>
       			<input type="submit" class="submitbutton btn btn-success btn-lg" name="Submit">
       		</form>
