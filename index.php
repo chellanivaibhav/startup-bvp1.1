@@ -1,4 +1,11 @@
-
+<?php session_start(); 
+	if(isset($_SESSION["session_var"])){
+		//do nothing for now 
+	}
+	else{
+		$_SESSION["session_var"]=0;
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
