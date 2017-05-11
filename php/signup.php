@@ -10,9 +10,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
 	<style>
 		body{
 			overflow-x: hidden;
@@ -150,53 +147,72 @@
 					}
 				}
 				if($usernameERR=="" && $passwordERR=="" && $phoneNoERR=="" && $emailERR==""){
+					$sql=$conn->prepare("SELECT * FROM user_details where username='$username'");
+					$sql->execute();
 
-
-					try{
-						$sql=$conn->prepare("INSERT INTO user_details(username,user_email,user_password,user_phone_number,user_session_variable) VALUES (?,?,?,?,?)");
-						$sql->execute(array($username,$email,$password,$phoneNo,2));
-						$universal="succesful";
-
-						//sending an email to verify
-						$code="sds0";
-						$message = "Your Activation Code is ";
-
-						$to=$email;
-						$subject="Activation Code For startup-bvp";
-						$from = 'vaibhavchellani223@gmail.com';
-						$body='Your Activation Code is '.$code;
-						$headers = "From:".$from;
-						$retval=mail($to,$subject,$body,$headers);
-						if( $retval == true ) {
-            echo "Message sent successfully...";
-         }else {
-            echo "Message could not be sent...";
-         }
+					$sqlResult=$sql->fetch(PDO::FETCH_ASSOC);
+					if($sqlResult){
+						$universal="Username Exists Already ";
+					}
+					else{
 						
+						try{
+
+							$sql=$conn->prepare("INSERT INTO user_details(username,user_email,user_password,user_phone_number,user_session_variable) VALUES (?,?,?,?,?)");
+							$sql->execute(array($username,$email,$password,$phoneNo,2));
+							$universal="Form submitted successfully check your email for a link to activate your account";
+
+						 //sending an email to verify
+							$code="this is testing of mail sending from startup-bvp website ";
+							$message = "Your Activation Code is ";
+
+							$to=$email;
+							$subject="Activation Code For startup-bvp";
+							$from = 'vaibhavchellani223@gmail.com';
+							$body='Your Activation Code is '.$code;
+							$headers = "From:".$from;
+							$retval=mail($to,$subject,$body,$headers);
+							if( $retval == true ) {
+								echo "Message sent successfully...";
+								$_SESSION["session_var"]=1;
+								$_SESSION["login_message"]="                      WELCOME  ";
+								$_SESSION["username"]=$username;
+								$_SESSION["user_email"]=$email;
+
+								?><script type="text/javascript">
+								window.location = "http://localhost/startup-bvp1.1/index.php";
+							</script>  
+							<?php
+								//todo add email verification part
+						}else {
+							echo "Message could not be sent...";
+						}
+
 					}
 					catch(PDOexception $e){
 						$universal="NOT SUCESSFUL";
 					}
 				}
 			}
-			?>
-			<?php echo $universal ; ?><br>
-			<!-- forms to be styled -->
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ;?>"> 
-				<input type="text" class="username" name="username" placeholder="username"><?php echo $usernameERR; ?><br>
-				<input type="text" class="username" name="email" placeholder="email"><?php echo $emailERR;?><br>
-				<input type="text" class="username" name="phoneNo" placeholder="Phone Number"><?php echo $phoneNoERR;?><br>
-				<input type="password" class="username" name="password" placeholder="Password"><?php echo $passwordERR;?><br>
-				<input type="submit" class="submitbutton btn btn-success btn-lg"  name="signup" value="Sign Up">
-			</form>
-			<?php  echo $username." ".$password . " ". $email." ". $phoneNo ;?>
-		</div>
-		<div class="col-sm-4">
-			
-		</div>
+		}
+		?>
+		<?php echo $universal ; ?><br>
+		<!-- forms to be styled -->
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ;?>"> 
+			<input type="text" class="username" name="username" placeholder="username"><?php echo $usernameERR; ?><br>
+			<input type="text" class="username" name="email" placeholder="email"><?php echo $emailERR;?><br>
+			<input type="text" class="username" name="phoneNo" placeholder="Phone Number"><?php echo $phoneNoERR;?><br>
+			<input type="password" class="username" name="password" placeholder="Password"><?php echo $passwordERR;?><br>
+			<input type="submit" class="submitbutton btn btn-success btn-lg"  name="signup" value="Sign Up">
+		</form>
+		<?php  echo $username." ".$password . " ". $email." ". $phoneNo ;?>
 	</div>
-	<!-- navbar start -->
+	<div class="col-sm-4">
 
-	<!-- navbar ended -->
+	</div>
+</div>
+<!-- navbar start -->
+
+<!-- navbar ended -->
 </body>
 </html>
