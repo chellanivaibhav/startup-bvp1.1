@@ -6,8 +6,8 @@ body{
 /*this is navbar styling*/
 .navbar {
     margin-bottom: 0;
-   // background-color: #6F1EF4;
-    background-color: black;
+  /* background-color: #292c2f;*/
+    background-color: #292c2f;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -23,8 +23,8 @@ body{
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-   // color: #6F1EF4 !important;
-    color: black !important;
+   /* color: #6F1EF4 !important;*/
+    color: #292c2f !important;
     background-color: #FCFAFF !important;
     font-size: 16px;
 }
@@ -37,15 +37,7 @@ body{
 
 .box{
     margin-top: 50px;
-    color: black;
-
-    background: #6F1EF4; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(black, #EAE5F1); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(black, #EAE5F1); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(black, #EAE5F1); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(black, #EAE5F1); /* Standard syntax */
-
-
+   
     height: 580px;
   
 
@@ -128,7 +120,7 @@ float:left;
 
 
   .logo-small {
-      color: black;
+      color: #292c2f;
       font-size: 100px;
   }
   input[type=submit]{
@@ -167,21 +159,6 @@ input[type=text] {
    
 }
 
-
-/*footer background*/
-.footer{
-    background-color: black;
-   
-    width: 100%;
-
-}
-.footertext{
-   font-family: 'Baloo Bhaina', cursive;
-    color:white;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 1%;
-}
 
 
 /*css part for slide element*/
