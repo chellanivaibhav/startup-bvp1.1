@@ -1,7 +1,8 @@
 body{
 
-        overflow-x: hidden;
+       overflow-x: hidden !important;
         overflow-y: scroll;
+        width: 100%;
 }
 /*this is navbar styling*/
 .navbar {
@@ -37,7 +38,7 @@ body{
 
 .box{
     margin-top: 50px;
-   
+   overflow-x: hidden !important;
     height: 580px;
   
 
@@ -49,23 +50,7 @@ body{
     margin-top: 20%;
 
 }
-/*filter dropdown it is*/
-.dropdownbox1{
-margin-left: 10px;
 
-margin-bottom: 10px;
-margin-top: 100px;
-float:left;
-}
-
-.xyz{
-     background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 /*make differ , testominal heading*/
 
 .make_differ_text{

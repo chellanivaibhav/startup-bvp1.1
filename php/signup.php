@@ -13,7 +13,16 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       
-
+      <script>
+    $(document).ready(function(){
+      $("#navup").click(function(){
+        $(".collapse").slideUp("slow");
+      });
+      $(".navbar .navbar-header").click(function(){
+        $(".collapse").slideToggle("slow");
+      });
+    });
+  </script>
 
 		<style>
 			 body{
@@ -101,7 +110,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
@@ -120,6 +129,7 @@
 		</div>
 	</nav>
 	<!-- navbar ended -->
+	<div id="navup"><!-- navup box for navbar -->
 		<div class="row container-fluid">
 		<div class="col-sm-4">
 			
@@ -203,5 +213,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		<!-- navbar start -->
 		
 		<!-- navbar ended -->
+		</div><!-- navup box ended -->
 	</body>
 	</html>

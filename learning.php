@@ -25,6 +25,147 @@
 			});
 		});
 	</script>
+	<style>
+	.subfilter{
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+		.container-fluid1{
+			display: flex;
+			flex-wrap: wrap;
+
+			float: left;
+		}
+		.xyz{
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			
+			border-radius: 0px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			
+			
+			cursor: pointer;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+		}
+		.xyz:hover {
+			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		} /*start of nd width 650*/
+		@media  screen  and (max-width:650px){
+			.subfilter{
+				margin-top: 100px;
+				margin-bottom: 100px;
+
+			}
+			#filter{
+				width: 100%;
+			}
+			.btn1{
+				order: 0;
+				width: 33.33%;
+			}
+			.btn2{
+				order: 1;
+				width: 33.33%;
+
+			}
+			.btn3{
+				order: 2;
+				width: 33.33%;
+			}
+			.btn4{
+				order: 3;
+				width: 100%;
+			}
+
+			.xyz{
+				padding: 8px 8px;
+				font-size: 12px;
+				margin-left: auto;margin-right: auto; margin-top: 10px;
+
+			}
+			#submitbutton2{
+				padding: 8px;
+				margin: 10px; 
+			}
+		}
+		/*end of max width 650*/
+
+
+		/*start of min width 650*/
+		@media  screen  and (min-width:650px){
+			.subfilter{
+				margin-top: 200px;
+				margin-bottom: 100px;
+			}
+			.xyz{
+				padding: 8px 8px;
+				font-size: 18px;
+				margin: 1px 0px;
+			}
+			.btn1 , .btn2 , .btn3 , .btn4 {
+				float: left;
+				padding: 1px;
+			}
+			#submitbutton2{
+				background-color: #C44242;
+				color: white;
+				margin-top: 1px;
+				border-radius: 0;
+				text-align: center;
+				padding: 6px 8px;
+				font-size: 19px;
+				}
+			#filterup{
+				width: 15%;
+				order: 0;
+			}
+			#filter{
+				margin-left: auto;
+				margin-right: auto;
+				
+				width: 70%
+				order :1;
+				
+			}
+			#filterdown{
+				width: 15%;
+				order: 2;
+			}
+		}
+		/*end of  min width of 650*/
+		/*start of max width of  350*/
+		@media  screen  and (max-width:350px){
+			.subfilter{
+				margin-top: 100px;
+				margin-bottom: 100px;
+
+			}
+			#filter{
+				width: 100%;
+			}
+			.xyz{
+				padding: 4px 4px;
+				font-size: 8px;
+
+			}
+		}
+		/*end of  max width of 350*/
+		#submitbutton2{
+			background-color: #C44242;
+			color: white;
+
+			border-style: none; 
+			
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
 	
 	<!-- on hold putter  check the proper naming in it -->
 </head>
@@ -57,53 +198,48 @@
 
 	<!-- this is the input start form   -->
 	<div id="navup"><!-- this is only for navbar id -->
-	<div class="row box">
-		<div class="col-sm-3">
+	<div class="subfilter">
+	<div id="filterup"></div>
+	
+	<div id="filter">
+	<form action="php/search.php" method="POST">
+	<div class="container-fluid1 dropdown btn1">
 
-		</div>
-		<div class="col-sm-6">
 
-			<form action="php/search.php" method="POST">
-				<!--distance dropdown box it is  -->
-					<div class="dropdown dropdownbox1 ">
-						<select name="Distance" class="btn btn-default xyz" ><!-- xyz for  styling -->
-							<option value="3">1-3 km</option>
-							<option value="5">3-5 km</option>
-							<option value="7">5-7 km</option>
-						</select>
+		<select name="Gender" class="btn  btn-responsive xyz" style=""><!-- xyz for  styling -->
+			<option value="Any">Gender : Any</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+	</div>
+	<div class="container-fluid1 btn2">
 
-					</div>
-				
+		<select name="Distance" class="btn  btn-responsive xyz"  ><!-- xyz for  styling -->
+			<option value="0">Distance:All</option>
 
-				<!-- gender dropdown it is -->
-					<div class="dropdown dropdownbox1">
+			<option value="3">1-3 km</option>
+			<option value="5">3-5 km</option>
+			<option value="7">5-7 km</option>
+		</select>
+	</div>
+	<div class="container-fluid1 btn3">
 
-						<select name="Gender" class="btn btn-default xyz"><!-- xyz for  styling -->
-							<option value="Any">Gender : Any</option>
-							<option value="Male">Male</option>
-							<option value="Female">Female</option>
-						</select>
+		
+		<select name="Budget" class="btn  btn-responsive xyz" ><!-- xyz for  styling -->
+			<option value="0<">Budget : All</option>
+			<option value="4<">4000<</option>
+			<option value="4+">4000+</option>
+			<option value="5+">5000+</option>
+		</select>
+	</div>
+	<div class="container-fluid1 btn4">
 
-					</div>
-				
-				<!--budget dropdown box it is  -->
-					<div class="dropdown dropdownbox1">
-
-						<select name="Budget" class="btn btn-default xyz"><!-- xyz for  styling -->
-							<option value="4<">4000<</option>
-							<option value="4+">4000+</option>
-							<option value="5+">5000+</option>
-						</select>
-
-					</div>
-			
-				<div class="dropdownbox1">
-					<input type="submit" name="SUBMIT" class=" btn" style="background-color: #C44242; color: white; margin: 3px; border-style: none; padding: 10px;">
-				</div>
-			</form> 
-		</div>
-		<div class="col-sm-4">
-		</div>
+		<input type="submit" name="SUBMIT" class=" btn" id="submitbutton2" >
+	</div>
+	</form>
+	</div>
+	
+	<div id="filterdown"></div>
 	</div>
 	<!-- this is input form end  -->
 

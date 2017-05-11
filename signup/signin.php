@@ -117,6 +117,16 @@
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
           <![endif]-->
+    <script>
+    $(document).ready(function(){
+      $("#navup").click(function(){
+        $(".collapse").slideUp("slow");
+      });
+      $(".navbar .navbar-header").click(function(){
+        $(".collapse").slideToggle("slow");
+      });
+    });
+  </script>
     </head>
 
     <body>  
@@ -124,7 +134,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
@@ -143,6 +153,8 @@
     </div>
   </nav>
     <!-- navbar end -->
+
+    <div id="navup"><!-- div nav up box -->
     <div class="text-center" style="margin-top: 70px;">
           <h2>Sign in to "company"</h2>
     </div>    
@@ -264,7 +276,7 @@
         
 		<!-- <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="assets/js/script.js"></script> -->
-
+    </div><!-- div navup box -->
 	</body>
 	</html>
 
