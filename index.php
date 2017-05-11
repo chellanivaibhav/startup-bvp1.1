@@ -1,4 +1,12 @@
-
+<?php session_start(); 
+	if(isset($_SESSION["session_var"])){
+		//do nothing for now 
+		echo $_SESSION["login_message"].$_SESSION["username"];
+	}
+	else{
+		$_SESSION["session_var"]=0;
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
