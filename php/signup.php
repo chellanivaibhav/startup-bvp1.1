@@ -1,82 +1,80 @@
-
-<!-- for validating form  -->
-
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>SignUp</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="shortcut icon" type="image/x-icon" href="hom.ico" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      
+<?php session_start();?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>SignUp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="hom.ico" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-		<style>
-			 body{
-                  overflow-x: hidden;
-            }
-             .navbar {
-    margin-bottom: 0;
-   // background-color: #6F1EF4;
-    background-color: black;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-weight: bold;
-}
 
-.navbar li a, .navbar .navbar-brand {
-   
-    color: #fff !important;
-}
+	<style>
+		body{
+			overflow-x: hidden;
+		}
+		.navbar {
+			margin-bottom: 0;
+			// background-color: #6F1EF4;
+			background-color: black;
+			z-index: 9999;
+			border: 0;
+			font-size: 12px !important;
+			line-height: 1.42857143 !important;
+			letter-spacing: 4px;
+			border-radius: 0;
+			font-weight: bold;
+		}
 
-.navbar-nav li a:hover, .navbar-nav li.active a {
-   // color: #6F1EF4 !important;
-    color: black !important;
-    background-color: #FCFAFF !important;
-    font-size: 16px;
-}
+		.navbar li a, .navbar .navbar-brand {
 
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-}
-			.submitbutton{
-				  margin-top: 20px;
-                  margin-left: 20px;
-                  margin-bottom: 10px;
+			color: #fff !important;
+		}
 
-            }
-			.username{
-                  font-size: 22px;
-                  width: 80%;
-                  padding: 12px 0px;
-                  margin: 10px 25px;
-                  box-sizing: border-box;
-                  border: none;
-                  border-bottom: 2px solid #ccc;
-            }
-            .username:focus{
-            	 outline: 0;
-            }
+		.navbar-nav li a:hover, .navbar-nav li.active a {
+			// color: #6F1EF4 !important;
+			color: black !important;
+			background-color: #FCFAFF !important;
+			font-size: 16px;
+		}
 
-			.box{
-                  margin-top: 10%;
-                  margin-bottom: 4%;
-                  border: solid;
-                  border-radius: 10px;
-                  padding-bottom: 1%;
-            }
-		</style>
-	</head>
-	<body>
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+			color: #fff !important;
+		}
+		.submitbutton{
+			margin-top: 20px;
+			margin-left: 20px;
+			margin-bottom: 10px;
+
+		}
+		.username{
+			font-size: 22px;
+			width: 80%;
+			padding: 12px 0px;
+			margin: 10px 25px;
+			box-sizing: border-box;
+			border: none;
+			border-bottom: 2px solid #ccc;
+		}
+		.username:focus{
+			outline: 0;
+		}
+
+		.box{
+			margin-top: 10%;
+			margin-bottom: 4%;
+			border: solid;
+			border-radius: 10px;
+			padding-bottom: 1%;
+		}
+	</style>
+</head>
+<body>
 	<!-- navbar start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -90,81 +88,98 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-				
-					<li><a href="../learning.php">HOME</a></li>
+
+					<li><a href="../index.php">HOME</a></li>
 					<li><a href="../signup/signin.php">SIGN IN</a></li>
 					<li><a href="signup.php">SIGN UP</a></li>
-					<li><a href="#contact">LOG OUT</a></li>
+					<li><a href="logout.php">LOG OUT</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- navbar ended -->
-		<div class="row container-fluid">
+	<div class="row container-fluid">
 		<div class="col-sm-4">
 			
 		</div>
 		<div class="box col-sm-4">
 			<?php 
-require 'connToDB.php';
-$universal="";
-$usernameERR=$passwordERR=$emailERR=$phoneNoERR="";
-$username=$password=$email=$phoneNo="";
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-	if(empty($_POST["username"])){
-		$usernameERR="Field Cannot Be Left Empty";
-	}
-	else{
-		$username=$_POST["username"];
+			require 'connToDB.php';
+			$universal="";
+			$usernameERR=$passwordERR=$emailERR=$phoneNoERR="";
+			$username=$password=$email=$phoneNo="";
+			if($_SERVER["REQUEST_METHOD"]=="POST"){
+				if(empty($_POST["username"])){
+					$usernameERR="Field Cannot Be Left Empty";
+				}
+				else{
+					$username=$_POST["username"];
 
-	}
-	if(empty($_POST["email"])){
-		$emailERR="Field Cannot Be Left Empty";
-	}
-	else{
-		if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-			$emailERR="Invalid email id";	
-		}
-		else{
-			$email=$_POST["email"];
-		}
-	}
-	if(empty($_POST["phoneNo"])){
-		$phoneNoERR="Field Cannot Be Left Empty";
-	}
-	else{
-		if(!is_numeric($_POST["phoneNo"])){
-			$phoneNoERR="Invalid Phone Number ";
-		}
-		else{
-			$phoneNo=$_POST["phoneNo"];
-		}
-	}
-	if(empty($_POST["password"])){
-		$passwordERR="Field Cannot Be Left Empty";
-	}
-	else{
-		if(strlen($_POST["password"])<=5){
-			$passwordERR="Password should be more than 5 characters";
-		}
-		else{
-			$password=$_POST["password"];
-		}
-	}
-	if($usernameERR=="" && $passwordERR=="" && $phoneNoERR=="" && $emailERR==""){
+				}
+				if(empty($_POST["email"])){
+					$emailERR="Field Cannot Be Left Empty";
+				}
+				else{
+					if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+						$emailERR="Invalid email id";	
+					}
+					else{
+						$email=$_POST["email"];
+					}
+				}
+				if(empty($_POST["phoneNo"])){
+					$phoneNoERR="Field Cannot Be Left Empty";
+				}
+				else{
+					if(!is_numeric($_POST["phoneNo"])){
+						$phoneNoERR="Invalid Phone Number ";
+					}
+					else{
+						$phoneNo=$_POST["phoneNo"];
+					}
+				}
+				if(empty($_POST["password"])){
+					$passwordERR="Field Cannot Be Left Empty";
+				}
+				else{
+					if(strlen($_POST["password"])<=5){
+						$passwordERR="Password should be more than 5 characters";
+					}
+					else{
+						$password=$_POST["password"];
+					}
+				}
+				if($usernameERR=="" && $passwordERR=="" && $phoneNoERR=="" && $emailERR==""){
 
-			
-			try{
-				$sql=$conn->prepare("INSERT INTO user_details(username,user_email,user_password,user_phone_number,user_session_variable) VALUES (?,?,?,?,?)");
-				$sql->execute(array($username,$email,$password,$phoneNo,2));
-				$universal="succesful";
+
+					try{
+						$sql=$conn->prepare("INSERT INTO user_details(username,user_email,user_password,user_phone_number,user_session_variable) VALUES (?,?,?,?,?)");
+						$sql->execute(array($username,$email,$password,$phoneNo,2));
+						$universal="succesful";
+
+						//sending an email to verify
+						$code="sds0";
+						$message = "Your Activation Code is ";
+
+						$to=$email;
+						$subject="Activation Code For startup-bvp";
+						$from = 'vaibhavchellani223@gmail.com';
+						$body='Your Activation Code is '.$code;
+						$headers = "From:".$from;
+						$retval=mail($to,$subject,$body,$headers);
+						if( $retval == true ) {
+            echo "Message sent successfully...";
+         }else {
+            echo "Message could not be sent...";
+         }
+						
+					}
+					catch(PDOexception $e){
+						$universal="NOT SUCESSFUL";
+					}
+				}
 			}
-			catch(PDOexception $e){
-				$universal="NOT SUCESSFUL";
-			}
-		}
-	}
-	?>
+			?>
 			<?php echo $universal ; ?><br>
 			<!-- forms to be styled -->
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ;?>"> 
@@ -179,9 +194,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		<div class="col-sm-4">
 			
 		</div>
-		</div>
-		<!-- navbar start -->
-		
-		<!-- navbar ended -->
-	</body>
-	</html>
+	</div>
+	<!-- navbar start -->
+
+	<!-- navbar ended -->
+</body>
+</html>

@@ -2,7 +2,7 @@
 
   //user not found =2 , logged in =1 , logged out =0
 if($_SESSION["session_var"]==1){
-  echo 'WELCOME '.$_SESSION["username"];
+  //means user is signed in 
 
 }
 elseif($_SESSION["session_var"]==0){
@@ -80,7 +80,7 @@ elseif($user==0 && $passwordinput==1) {
     if($Password==$sqlResult["user_password"]){
 
       $universalERR="Welcome ".$EmailORUsername;
-      $_SESSION["u)sername"]=$sqlResult["username"];
+      $_SESSION["username"]=$sqlResult["username"];
       $_SESSION["user_email"]=$sqlResult["user_email"];
       $_SESSION["session_var"]=1;
       $_SESSION["login_message"]="                      WELCOME  ";
@@ -262,8 +262,8 @@ else{
               </div>
             </div>
           </nav>
-          <!-- navbar end -->
-          
+          <!-- navbar end
+           -->
         </body>
         </html>
 

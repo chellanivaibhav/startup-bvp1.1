@@ -1,5 +1,3 @@
-<!-- connects to database , params(servername,databaseName,username,password)
- -->
  <?php
 	$servername="localhost";
 	$username="root";
@@ -14,3 +12,5 @@
 		echo "Connection Failed ".$e->getMessage();
 	}
 ?>
+<!-- connects to database , params(servername,databaseName,username,password)
+ -->
