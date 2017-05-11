@@ -1,6 +1,9 @@
 <?php session_start(); 
 
   //user not found =2 , logged in =1 , logged out =0
+if(!isset($_SESSION["session_var"])){
+  $_SESSION["session_var"]=0;
+}
 if($_SESSION["session_var"]==1){
   //means user is signed in 
 
