@@ -13,15 +13,29 @@
 	<link rel="stylesheet" type="text/css" href="stylelearning.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
+	
+	<!-- on hold check the naming  -->
+	<script>
+		$(document).ready(function(){
+			$("#navup").click(function(){
+				$(".collapse").slideUp("slow");
+			});
+			$(".navbar .navbar-header").click(function(){
+				$(".collapse").slideToggle("slow");
+			});
+		});
+	</script>
+	
+	<!-- on hold putter  check the proper naming in it -->
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="80">
+<body data-spy="scroll" data-target=".navbar" data-offset="80" >
 
 	<!-- navbar start -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
@@ -42,7 +56,7 @@
 	<!-- navbar ended -->
 
 	<!-- this is the input start form   -->
-	
+	<div id="navup"><!-- this is only for navbar id -->
 	<div class="row box">
 		<div class="col-sm-3">
 
@@ -332,7 +346,7 @@
 		</footer>
 	<!-- footer end  here -->
 
-
+	</div><!-- navbar id end to  up -->
 
 
 
