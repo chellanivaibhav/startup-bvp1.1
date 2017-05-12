@@ -1,3 +1,14 @@
+
+
+<?php session_start(); 
+	if(isset($_SESSION["session_var"])){
+		//do nothing for now 
+	}
+	else{
+		$_SESSION["session_var"]=0;
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +36,7 @@
 			});
 		});
 	</script>
+
 	<style>
 	.subfilter{
 			display: flex;
@@ -174,6 +186,8 @@ margin-top: 100px;
 }
 	</style>
 
+
+
 	
 	<!-- on hold putter  check the proper naming in it -->
 </head>
@@ -206,6 +220,7 @@ margin-top: 100px;
 
 	<!-- this is the input start form   -->
 	<div id="navup"><!-- this is only for navbar id -->
+
 	<div id="yui">Company name  </div>
 	<!-- filter buttons -->
 	<div class="subfilter">
@@ -250,6 +265,9 @@ margin-top: 100px;
 	</div>
 	
 	<div id="filterdown"></div>
+
+
+
 	</div>
 	<!-- this is input form end  -->
 
