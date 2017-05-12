@@ -99,7 +99,7 @@
 		/*start of min width 650*/
 		@media  screen  and (min-width:650px){
 			.subfilter{
-				margin-top: 200px;
+				margin-top: 100px;
 				margin-bottom: 100px;
 			}
 			.xyz{
@@ -164,6 +164,14 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+
+
+#yui{
+  text-align: center;
+font-size: 58px;
+font-weight: bold;
+margin-top: 100px;
+}
 	</style>
 
 	
@@ -198,6 +206,8 @@
 
 	<!-- this is the input start form   -->
 	<div id="navup"><!-- this is only for navbar id -->
+	<div id="yui">Company name  </div>
+	<!-- filter buttons -->
 	<div class="subfilter">
 	<div id="filterup"></div>
 	
