@@ -22,7 +22,7 @@
 		</div>
 		<div class="col-sm-4">
 
-			<form action="search.php" method="POST">
+			<form action="php/search.php" method="POST">
 				<div class="dropdownbox1 "><!--distance dropdown box it is  -->
 					<div class="dropdown ">
 						<select name="Distance" class="btn btn-default xyz" ><!-- xyz for  styling -->

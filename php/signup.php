@@ -1,54 +1,6 @@
-<?php session_start();?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<title>SignUp</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="hom.ico" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-		body{
-			overflow-x: hidden;
-		}
-		.navbar {
-			margin-bottom: 0;
-			// background-color: #6F1EF4;
-			background-color: black;
-			z-index: 9999;
-			border: 0;
-			font-size: 12px !important;
-			line-height: 1.42857143 !important;
-			letter-spacing: 4px;
-			border-radius: 0;
-			font-weight: bold;
-		}
 
-		.navbar li a, .navbar .navbar-brand {
+<!-- for validating form  -->
 
-			color: #fff !important;
-		}
-
-		.navbar-nav li a:hover, .navbar-nav li.active a {
-			// color: #6F1EF4 !important;
-			color: black !important;
-			background-color: #FCFAFF !important;
-			font-size: 16px;
-		}
-
-		.navbar-default .navbar-toggle {
-			border-color: transparent;
-			color: #fff !important;
-		}
-		.submitbutton{
-			margin-top: 20px;
-			margin-left: 20px;
-			margin-bottom: 10px;
-		}
-/*
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -57,7 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/x-icon" href="hom.ico" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -111,33 +62,45 @@
                   margin-left: 20px;
                   margin-bottom: 10px;
 
-                  */
+            }
+			.username{
+                  font-size: 22px;
+                  width: 80%;
+                  padding: 12px 0px;
+                  margin: 10px 25px;
+                  box-sizing: border-box;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+            }
+            .username:focus{
+            	 outline: 0;
+            }
 
-                  .username{
-                  	font-size: 22px;
-                  	width: 80%;
-                  	padding: 12px 0px;
-                  	margin: 10px 25px;
-                  	box-sizing: border-box;
-                  	border: none;
-                  	border-bottom: 2px solid #ccc;
-                  }
-                  .username:focus{
-                  	outline: 0;
-                  }
+			.box{
+                 
+                  margin-bottom: 4%;
+                  border: solid;
+                  border-radius: 10px;
+                  padding-bottom: 1%;
+            }
+            @media  screen  and (min-width:750px){
+            	.box{
+            		 margin-top: 10%;
+            		 width: 40%;
 
-                  .box{
+            	}
+            }
+             @media  screen  and (min-width:850px){
+            	.box{
+            		 margin-top: 10%;
+            		 width: 33.3%;
 
-                  	margin-bottom: 4%;
-                  	border: solid;
-                  	border-radius: 10px;
-                  	padding-bottom: 1%;
-                  }
-                  @media  screen  and (min-width:750px){
-                  	.box{
-                  		margin-top: 10%;
-                  		width: 40%;
-
+            	}
+            }
+            @media  screen  and (max-width:750px){
+            		 .box{
+            		 	margin-top: 20%;
+            		 }
 
             }
 		</style>
@@ -253,4 +216,3 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 		</div><!-- navup box ended -->
 	</body>
 	</html>
-
