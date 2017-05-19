@@ -144,8 +144,8 @@ else{
     }
     .navbar {
       margin-bottom: 0;
-      // background-color: #6F1EF4;
-      background-color: black;
+      
+      background-color: #292c2f;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -186,23 +186,28 @@ else{
             .box{
                   margin-top: 3%;
                   border: solid;
-                  border-color: #6F6F6F;
-                  border-radius: 5px;
+                  border-color: #292c2f;
+                  border-radius: 0px;
                   padding-bottom: 10px;
                   margin-left: auto;
                   margin-right: auto;
             }
+            .box:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
             .box1{
               margin-left: auto;
                   margin-right: auto;
               width: 33.3%;
                   border: solid;
-                  border-radius: 5px;
+                  border-radius: 0px;
                   margin-top:  10px;
-                  border-color: #6F6F6F;
+                  border-color: #292c2f;
                   background-color: white;
             }
-            
+            .box1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
             @media  screen  and (min-width:750px){
               .box1{
                 margin-left: auto;
