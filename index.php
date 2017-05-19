@@ -198,9 +198,8 @@ else{
 			text-align: center;
 			font-size: 58px;
 			font-weight: bold;
-			margin-top: 100px;
+			margin-top: 50px;
 		}
-
 
 		/*letter drop  style*/
 		.letterDrop {
@@ -264,13 +263,13 @@ else{
 	<!-- this is the input start form   -->
 	<div id="navup"><!-- this is only for navbar id -->
 		<div id="yui">
-		<h1>company name </h1>
+		<h1 style="padding-left: 35px;">company name </h1>
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="letter.js"></script>
 		  </div>
 		<!-- filter buttons -->
-		<div class="subfilter">
+		<div class="subfilter" style="padding-top: 100px;">
 			<div id="filterup"></div>
 
 			<div id="filter">
@@ -502,15 +501,15 @@ else{
 					<form>
 						<div class="form-item">
 							<label for="fname">NAME</label>
-							<input type="text" id="fname" name="fname" placeholder="NAME " style="outline: 0;">
+							<input type="text" id="fname" name="fname" placeholder="NAME " autocomplete="off" style="outline: 0;">
 						</div>
 						<div class="form-item">
 							<label for="email">EMAIL ID</label>
-							<input type="text" id="lname" name="email" placeholder="xyz@abc.com" style="outline: 0;">
+							<input type="text" id="lname" name="email" placeholder="xyz@abc.com" autocomplete="off" style="outline: 0;">
 						</div>
 						<div class="form-item">
 							<label for="email">MESSAGE</label>
-							<textarea placeholder="say something" class="messagetext" style="outline: 0;"></textarea>
+							<textarea placeholder="say something" class="messagetext" autocomplete="off" style="outline: 0;"></textarea>
 						</div>
 						<div>
 							<a href="mailto:tuskibansal@gmail.com"><input type="submit" name="SUBMIT"></a>

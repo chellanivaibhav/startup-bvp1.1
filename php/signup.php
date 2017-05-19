@@ -275,10 +275,10 @@
 <!-- forms to be styled -->
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ;?>"> 
  
- <input type="text" class="username" name="username" placeholder="username"><?php echo $usernameERR; ?><br>
+ <input type="text" class="username" name="username" placeholder="username" autocomplete="off"><?php echo $usernameERR; ?><br>
  
- <input type="text" class="username" name="email" placeholder="email"><?php echo $emailERR;?><br>
- <input type="text" class="username" name="phoneNo" placeholder="Phone Number"><?php echo $phoneNoERR;?><br>
+ <input type="text" class="username" name="email" placeholder="email" autocomplete="off"><?php echo $emailERR;?><br>
+ <input type="text" class="username" name="phoneNo" placeholder="Phone Number" autocomplete="off"><?php echo $phoneNoERR;?><br>
  <input type="password" class="username" name="password" placeholder="Password"><?php echo $passwordERR;?><br>
  <input type="submit" class="submitbutton btn  btn-lg"  name="signup" value="Sign Up">
 </form>
