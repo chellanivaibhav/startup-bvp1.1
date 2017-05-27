@@ -166,113 +166,113 @@ else{
    .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
-}
-            .username{
-                  font-size: 22px;
-                  width: 80%;
-                  padding: 12px 0px;
-                  margin: 10px 25px;
-                  box-sizing: border-box;
-                  border: none;
-                  border-bottom: 2px solid #ccc;
-            }
-            .username:focus{
-              outline: 0; 
-            }
-            .submitbutton{
-                  margin-left: 20px;
-                  margin-bottom: 10px;
-            }
-            .box{
-                  margin-top: 3%;
-                  border: solid;
-                  border-color: #292c2f;
-                  border-radius: 0px;
-                  padding-bottom: 10px;
-                  margin-left: auto;
-                  margin-right: auto;
-            }
-            .box:hover {
+  }
+  .username{
+    font-size: 22px;
+    width: 80%;
+    padding: 12px 0px;
+    margin: 10px 25px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+  }
+  .username:focus{
+    outline: 0; 
+  }
+  .submitbutton{
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .box{
+    margin-top: 3%;
+    border: solid;
+    border-color: #292c2f;
+    border-radius: 0px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-            .box1{
-              margin-left: auto;
-                  margin-right: auto;
-              width: 33.3%;
-                  border: solid;
-                  border-radius: 0px;
-                  margin-top:  10px;
-                  border-color: #292c2f;
-                  background-color: white;
-            }
-            .box1:hover {
+  }
+  .box1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 33.3%;
+    border: solid;
+    border-radius: 0px;
+    margin-top:  10px;
+    border-color: #292c2f;
+    background-color: white;
+  }
+  .box1:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-            @media  screen  and (min-width:750px){
-              .box1{
-                margin-left: auto;
-                  margin-right: auto;
-              width: 33.3%;
-              }
-              .box1 span{
-                  font-size: 20px;
-            }
-            .box1 a{
-                  font-size: 18px;
-            }
-            }
-             @media  screen  and (max-width:750px){
-              .box1{
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-              }
-              .box1 span{
-                  font-size: 20px;
-            }
-            .box1 a{
-                  font-size: 18px;
-            }
-             }
+  }
+  @media  screen  and (min-width:750px){
+    .box1{
+      margin-left: auto;
+      margin-right: auto;
+      width: 33.3%;
+    }
+    .box1 span{
+      font-size: 20px;
+    }
+    .box1 a{
+      font-size: 18px;
+    }
+  }
+  @media  screen  and (max-width:750px){
+    .box1{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .box1 span{
+      font-size: 20px;
+    }
+    .box1 a{
+      font-size: 18px;
+    }
+  }
 </style>
-         <script>
-    $(document).ready(function(){
-      $("#navup").click(function(){
-        $(".collapse").slideUp("slow");
-      });
-      $(".navbar .navbar-header").click(function(){
-        $(".collapse").slideToggle("slow");
-      });
+<script>
+  $(document).ready(function(){
+    $("#navup").click(function(){
+      $(".collapse").slideUp("slow");
     });
-  </script>         
+    $(".navbar .navbar-header").click(function(){
+      $(".collapse").slideToggle("slow");
+    });
+  });
+</script>         
 
-        </head>
+</head>
 
-        <body>  
-          <!-- navbar start -->
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>                        
-                </button>
-                <a class="navbar-brand" href="#myPage">Logo</a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
+<body>  
+  <!-- navbar start -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
 
-                  <li><a href="../index.php">HOME</a></li>
-                  <li><a href="signin.php">SIGN IN</a></li>
-                  <li><a href="../php/signup.php">SIGN UP</a></li>
-                  <li><a href="../php/logout.php">LOG OUT</a></li>
-                </ul>
-              </div>
+          <li><a href="../index.php">HOME</a></li>
+          <li><a href="signin.php">SIGN IN</a></li>
+          <li><a href="../php/signup.php">SIGN UP</a></li>
+          <li><a href="../php/logout.php">LOG OUT</a></li>
+        </ul>
+      </div>
 
-            </div>
-          </nav>
+    </div>
+  </nav>
           <!-- navbar end
-           -->
-        </body>
-        </html>
+        -->
+      </body>
+      </html>
