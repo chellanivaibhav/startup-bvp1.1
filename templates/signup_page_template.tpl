@@ -155,7 +155,7 @@
               <body style="background-color: #95C7E8;"> 
 
                <!-- navbar start -->
-               <nav class="navbar navbar-default navbar-fixed-top">
+               <!-- <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                  <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -175,7 +175,7 @@
                </ul>
              </div>
            </div>
-         </nav>
+         </nav> -->
          <!-- navbar ended -->
          <div class="row container-fluid" id="navup">
           <div class="col-sm-4">

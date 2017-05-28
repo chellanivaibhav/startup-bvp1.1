@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-27 23:27:51
+/* Smarty version 3.1.31, created on 2017-05-28 00:49:28
   from "/var/www/html/startup-bvp1.1/templates/signup_page_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5929be1f414747_85450737',
+  'unifunc' => 'content_5929d1409cecd8_64659611',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ef20b36ebd1d81afd3729b701e333af6d62851d0' => 
     array (
       0 => '/var/www/html/startup-bvp1.1/templates/signup_page_template.tpl',
-      1 => 1495907861,
+      1 => 1495912762,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5929be1f414747_85450737 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5929d1409cecd8_64659611 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -189,7 +189,7 @@ function content_5929be1f414747_85450737 (Smarty_Internal_Template $_smarty_tpl)
               <body style="background-color: #95C7E8;"> 
 
                <!-- navbar start -->
-               <nav class="navbar navbar-default navbar-fixed-top">
+               <!-- <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                  <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -209,7 +209,7 @@ function content_5929be1f414747_85450737 (Smarty_Internal_Template $_smarty_tpl)
                </ul>
              </div>
            </div>
-         </nav>
+         </nav> -->
          <!-- navbar ended -->
          <div class="row container-fluid" id="navup">
           <div class="col-sm-4">

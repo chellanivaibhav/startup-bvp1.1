@@ -16,10 +16,27 @@ $smarty->assign('username', '');
 $smarty->assign('password', '');
 $smarty->assign('email', '');
 $smarty->assign('phoneNo', '');
+if(isset($_SESSION["session_var"])){
+		//do nothing for now
+		if ($_SESSION["session_var"]==0) 
+		{
+			 	$smarty->display('../templates/navbar_loggedOUT.tpl');
 
+		} 
+		else if($_SESSION["session_var"]==1)
+		{
+			 	$smarty->display('../templates/navbar_loggedIN.tpl');
+		 	
+		}
+		  
+}
+else{
+	$_SESSION["session_var"]=0;
+}
 
-
-$universal=$usernameERR=$passwordERR=$emailERR=$phoneNoERR=$username=password=$email="";
+$universal="";
+           $usernameERR=$passwordERR=$emailERR=$phoneNoERR="";
+           $username=$password=$email=$phoneNo="";
 
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){

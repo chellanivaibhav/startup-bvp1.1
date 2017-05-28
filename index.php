@@ -1,6 +1,20 @@
 <?php session_start(); 
+include('vendor/smarty/smarty/libs/Smarty.class.php');
+
+$smarty = new Smarty;
 if(isset($_SESSION["session_var"])){
-		//do nothing for now 
+		//do nothing for now
+		if ($_SESSION["session_var"]==0) 
+		{
+			 	$smarty->display('templates/navbar_loggedOUT.tpl');
+
+		} 
+		else if($_SESSION["session_var"]==1)
+		{
+			 	$smarty->display('templates/navbar_loggedIN.tpl');
+		 	
+		}
+		  
 }
 else{
 	$_SESSION["session_var"]=0;
@@ -237,7 +251,7 @@ else{
 <body data-spy="scroll" data-target=".navbar" data-offset="80" >
 
 	<!-- navbar start -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<!-- <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
@@ -257,7 +271,7 @@ else{
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 	<!-- navbar ended -->
 
 	<!-- this is the input start form   -->
