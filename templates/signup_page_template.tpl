@@ -140,7 +140,7 @@
                   }
                 </style>
                 <!-- navbar sccript here -->
-                <script>
+                <!-- <script>
                   $(document).ready(function(){
                     $("#navup").click(function(){
                       $(".collapse").slideUp("slow");
@@ -150,7 +150,7 @@
                     });
                   });
                 </script>
-                
+                 -->
               </head>
               <body style="background-color: #95C7E8;"> 
 

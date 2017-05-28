@@ -40,6 +40,10 @@
     border-color: transparent;
     color: #fff !important;
 }
+
+
+
+
 	</style>
 	<script>
 		$(document).ready(function(){
@@ -53,10 +57,11 @@
 	</script>
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
@@ -68,7 +73,7 @@
 					<li><a href="#about">ABOUT</a></li>
 					<li><a href="#contact">CONTACT</a></li>
 					<li><a href="signup/signin.php">LOG IN</a></li>
-					<li><a href="php/signup.php">SIGN UP</a></li>
+					<li><a href="php/signup.php">SIGNUP</a></li>
 					
 				</ul>
 			</div>
