@@ -110,17 +110,6 @@
     }
   }
 </style>
-<!-- <script>
-  $(document).ready(function(){
-    $("#navup").click(function(){
-      $(".collapse").slideUp("slow");
-    });
-    $(".navbar .navbar-header").click(function(){
-      $(".collapse").slideToggle("slow");
-    });
-  });
-</script>       -->   
-
 </head>
 
 <body>  
