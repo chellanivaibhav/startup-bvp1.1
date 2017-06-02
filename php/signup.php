@@ -16,11 +16,12 @@ $smarty->assign('username', '');
 $smarty->assign('password', '');
 $smarty->assign('email', '');
 $smarty->assign('phoneNo', '');
+
 if(isset($_SESSION["session_var"])){
 		//do nothing for now
 		if ($_SESSION["session_var"]==0) 
 		{
-			 	$smarty->display('../templates/navbar_loggedOUT.tpl');
+			$smarty->display('../templates/navbar_loggedOUT.tpl');
 
 		} 
 		else if($_SESSION["session_var"]==1)
@@ -32,6 +33,7 @@ if(isset($_SESSION["session_var"])){
 }
 else{
 	$_SESSION["session_var"]=0;
+	$smarty->display('../templates/navbar_loggedOUT.tpl');
 }
 
 $universal="";

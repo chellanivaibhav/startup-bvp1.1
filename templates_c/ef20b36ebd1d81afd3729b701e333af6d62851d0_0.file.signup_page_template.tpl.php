@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-28 00:49:28
+/* Smarty version 3.1.31, created on 2017-05-28 21:22:26
   from "/var/www/html/startup-bvp1.1/templates/signup_page_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5929d1409cecd8_64659611',
+  'unifunc' => 'content_592af23a7bb243_51962313',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ef20b36ebd1d81afd3729b701e333af6d62851d0' => 
     array (
       0 => '/var/www/html/startup-bvp1.1/templates/signup_page_template.tpl',
-      1 => 1495912762,
+      1 => 1495986736,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5929d1409cecd8_64659611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_592af23a7bb243_51962313 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -172,7 +172,7 @@ function content_5929d1409cecd8_64659611 (Smarty_Internal_Template $_smarty_tpl)
                   }
                 </style>
                 <!-- navbar sccript here -->
-                <?php echo '<script'; ?>
+                <!-- <?php echo '<script'; ?>
 >
                   $(document).ready(function(){
                     $("#navup").click(function(){
@@ -184,7 +184,7 @@ function content_5929d1409cecd8_64659611 (Smarty_Internal_Template $_smarty_tpl)
                   });
                 <?php echo '</script'; ?>
 >
-                
+                 -->
               </head>
               <body style="background-color: #95C7E8;"> 
 

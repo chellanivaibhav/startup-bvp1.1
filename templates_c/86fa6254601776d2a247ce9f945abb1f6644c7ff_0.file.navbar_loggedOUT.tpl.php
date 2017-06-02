@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-28 10:14:47
+/* Smarty version 3.1.31, created on 2017-05-28 21:16:04
   from "/var/www/html/startup-bvp1.1/templates/navbar_loggedOUT.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_592a55bfeb3676_05727464',
+  'unifunc' => 'content_592af0bcc0dcb6_95500832',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '86fa6254601776d2a247ce9f945abb1f6644c7ff' => 
     array (
       0 => '/var/www/html/startup-bvp1.1/templates/navbar_loggedOUT.tpl',
-      1 => 1495912991,
+      1 => 1495986356,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_592a55bfeb3676_05727464 (Smarty_Internal_Template $_smarty_tpl) {
+function content_592af0bcc0dcb6_95500832 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,6 +68,10 @@ function content_592a55bfeb3676_05727464 (Smarty_Internal_Template $_smarty_tpl)
     border-color: transparent;
     color: #fff !important;
 }
+
+
+
+
 	</style>
 	<?php echo '<script'; ?>
 >
@@ -83,10 +87,11 @@ function content_592a55bfeb3676_05727464 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
@@ -98,7 +103,7 @@ function content_592a55bfeb3676_05727464 (Smarty_Internal_Template $_smarty_tpl)
 					<li><a href="#about">ABOUT</a></li>
 					<li><a href="#contact">CONTACT</a></li>
 					<li><a href="signup/signin.php">LOG IN</a></li>
-					<li><a href="php/signup.php">SIGN UP</a></li>
+					<li><a href="php/signup.php">SIGNUP</a></li>
 					
 				</ul>
 			</div>
