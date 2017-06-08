@@ -1,9 +1,25 @@
 <?php session_start(); 
+include('vendor/smarty/smarty/libs/Smarty.class.php');
+
+$smarty = new Smarty;
 if(isset($_SESSION["session_var"])){
-		//do nothing for now 
+		//do nothing for now
+		if ($_SESSION["session_var"]==0) 
+		{
+			 	$smarty->display('templates/navbar_loggedOUT.tpl');
+
+		} 
+		else if($_SESSION["session_var"]==1)
+		{
+			 	$smarty->display('templates/navbar_loggedIN.tpl');
+		 	
+		}
+		  
 }
 else{
+
 	$_SESSION["session_var"]=0;
+	$smarty->display('templates/navbar_loggedOUT.tpl');
 }
 ?>
 <!DOCTYPE html>
@@ -22,7 +38,7 @@ else{
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
 	
-	<!-- on hold check the naming  -->
+	<!-- on hold check the naming -->
 	<!-- page refresh at see from top -->
 	<script >
 		$(document).ready(function(){
@@ -43,7 +59,7 @@ else{
 	</script>
 	<!-- navbar js -->
 	<!-- touch  this and i will kill u -->
-	<script>
+	<!-- <script>
 		$(document).ready(function(){
 			$("#navup").click(function(){
 				$(".collapse").slideUp("slow");
@@ -52,7 +68,7 @@ else{
 				$(".collapse").slideToggle("slow");
 			});
 		});
-	</script>
+	</script> -->
 	<style>
 		.subfilter{
 			display: flex;
@@ -237,7 +253,7 @@ else{
 <body data-spy="scroll" data-target=".navbar" data-offset="80" >
 
 	<!-- navbar start -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<!-- <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="" data-target="#myNavbar">
@@ -257,7 +273,7 @@ else{
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 	<!-- navbar ended -->
 
 	<!-- this is the input start form   -->
