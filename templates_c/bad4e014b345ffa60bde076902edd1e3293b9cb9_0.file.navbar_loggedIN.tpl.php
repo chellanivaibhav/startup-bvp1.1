@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-06-11 16:35:02
+/* Smarty version 3.1.31, created on 2017-06-11 20:18:06
   from "/var/www/html/startup-bvp1.1/templates/navbar_loggedIN.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_593d23deb671b4_78294379',
+  'unifunc' => 'content_593d582655abb7_04767121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bad4e014b345ffa60bde076902edd1e3293b9cb9' => 
     array (
       0 => '/var/www/html/startup-bvp1.1/templates/navbar_loggedIN.tpl',
-      1 => 1497033944,
+      1 => 1497192466,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_593d23deb671b4_78294379 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593d582655abb7_04767121 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title>login  navabr</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -95,7 +93,7 @@ function content_593d23deb671b4_78294379 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about">ABOUT</a></li>
+					<li><a href="../index.php#about">ABOUT</a></li>
 					<li><a href="#contact">CONTACT</a></li>
 					//testing 
 				<li class="dropdown" >

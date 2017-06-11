@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title>login  navabr</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -71,8 +69,8 @@
 				<li class="dropdown" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" style="color: black;">
-            <li ><a href="#"  style="color: black !important;">Profile</a></li>
-            <li><a href="#" style="color: black !important;">Shortlist</a></li>
+            <li ><a href="#"  style="color: black !important;">My Profile </a></li>
+            <li><a href="#" style="color: black !important;">View Shortlisted Properties</a></li>
             <li><a href="#" style="color: black !important;">Logout</a></li>
             
           </ul>
