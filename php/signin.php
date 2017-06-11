@@ -1,20 +1,24 @@
-<?php session_start(); 
-  //user not found =2 , logged in =1 , logged out =0
+<?php 
+
+session_start(); 
+//user not found =2 , logged in =1 , logged out =0
 
 include('../vendor/smarty/smarty/libs/Smarty.class.php');
 $smarty = new Smarty;
-if(!isset($_SESSION["session_var"])){
+if(!isset($_SESSION["session_var"]))
+{
   $_SESSION["session_var"]=0;
 }
-if($_SESSION["session_var"]==1){
+if($_SESSION["session_var"]==1)
+{
   //means user is signed in 
   $smarty->display('../templates/navbar_loggedIN.tpl');
 }
-elseif($_SESSION["session_var"]==0){
+elseif($_SESSION["session_var"]==0)
+{
   //display login form
   require '../php/connToDB.php';
   $smarty->display('../templates/navbar_loggedOUT.tpl');
-  $smarty->display('../templates/signin_page_template.tpl');
   
   $smarty->assign('EmailORUsername', '');
   $smarty->assign('Password', '');
@@ -26,30 +30,37 @@ elseif($_SESSION["session_var"]==0){
   $EmailORUsername=$Password="";
   $EmailORUsernameERR=$PasswordERR=$universalERR="";
   $user=$passwordinput=2;
-  if($_SERVER["REQUEST_METHOD"]=="POST"){
-    if(empty($_POST["EmailORUsername"])){
+  if($_SERVER["REQUEST_METHOD"]=="POST")
+  {
+    if(empty($_POST["EmailORUsername"]))
+    {
       $EmailORUsernameERR="Cannot leave empty ";
       $smarty->assign('EmailORUsernameERR',$EmailORUsernameERR);
     }
-    else{
+    else
+    {
       $EmailORUsername=$_POST["EmailORUsername"];
-      if(!filter_var($EmailORUsername, FILTER_VALIDATE_EMAIL)) {
+      if(!filter_var($EmailORUsername, FILTER_VALIDATE_EMAIL)) 
+      {
         //triggered when user inputs username
-      $sql=$conn->prepare("SELECT * FROM user_details where user_email='$EmailORUsername'");
-  $sql->execute();
-    $user=1; 
+        $sql=$conn->prepare("SELECT * FROM user_details where user_email='$EmailORUsername'");
+        $sql->execute();
+        $user=1; 
       }
-      else{
+      else
+      {
         //triggered when user enters email
         $user=0;
       }
     }
-    if(empty($_POST["Password"])){
+    if(empty($_POST["Password"]))
+    {
       $PasswordERR="Cannot be left empty";
       $smarty->assign('PasswordERR', $PasswordERR);
 
     }
-    else{
+    else
+    {
       $passwordinput=1;
       $Password=$_POST["Password"];
       $smarty->assign('Password', $Password);
@@ -63,10 +74,11 @@ elseif($_SESSION["session_var"]==0){
     $sqlResult=$sql->fetch(PDO::FETCH_ASSOC);
     if(!$sqlResult){
       $universalERR="Username Not found";
-            $smarty->assign('universalERR', $universalERR);
+      $smarty->assign('universalERR', $universalERR);
 
     }
-    else {
+    else 
+    {
       if($Password==$sqlResult["user_password"]){
         $universalERR="Welcome ".$EmailORUsername;
         $_SESSION["username"]=$sqlResult["username"];
@@ -79,11 +91,10 @@ elseif($_SESSION["session_var"]==0){
       <?php
       
     }
-    else{
+    else
+    {
       $universalERR="Incorrect Credentials";
-            $smarty->assign('universalERR', $universalERR);
-
-      
+      $smarty->assign('universalERR', $universalERR);
     }
   }
 
@@ -98,7 +109,7 @@ elseif($user==0 && $passwordinput==1) {
   $sqlResult=$sql->fetch(PDO::FETCH_ASSOC);
   if(!$sqlResult){
     $universalERR="Email Not found";
-          $smarty->assign('universalERR', $universalERR);
+    $smarty->assign('universalERR', $universalERR);
 
 
     
@@ -123,7 +134,7 @@ elseif($user==0 && $passwordinput==1) {
   }
   else{
     $universalERR="Incorrect Credentials";
-          $smarty->assign('universalERR', $universalERR);
+    $smarty->assign('universalERR', $universalERR);
 
   }
 }
@@ -131,12 +142,13 @@ elseif($user==0 && $passwordinput==1) {
 
 
 
-      $smarty->assign('EmailORUsername', $EmailORUsername);
-      $smarty->assign('Password', $Password);
-      $smarty->assign('PasswordERR', $PasswordERR);
-      $smarty->assign('EmailORUsernameERR', $EmailORUsernameERR);
-      $smarty->assign('universalERR', $universalERR);
-      $smarty->assign('username', $username);
+$smarty->assign('EmailORUsername', $EmailORUsername);
+$smarty->assign('Password', $Password);
+$smarty->assign('PasswordERR', $PasswordERR);
+$smarty->assign('EmailORUsernameERR', $EmailORUsernameERR);
+$smarty->assign('universalERR', $universalERR);
+$smarty->assign('username', $username);
+$smarty->display('../templates/signin_page_template.tpl');
 
 }
 else{

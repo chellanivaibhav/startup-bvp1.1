@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-28 10:19:23
+/* Smarty version 3.1.31, created on 2017-06-11 16:35:02
   from "/var/www/html/startup-bvp1.1/templates/navbar_loggedIN.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_592a56d31b8148_00253800',
+  'unifunc' => 'content_593d23deb671b4_78294379',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bad4e014b345ffa60bde076902edd1e3293b9cb9' => 
     array (
       0 => '/var/www/html/startup-bvp1.1/templates/navbar_loggedIN.tpl',
-      1 => 1495946932,
+      1 => 1497033944,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_592a56d31b8148_00253800 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593d23deb671b4_78294379 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -97,7 +97,7 @@ function content_592a56d31b8148_00253800 (Smarty_Internal_Template $_smarty_tpl)
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#about">ABOUT</a></li>
 					<li><a href="#contact">CONTACT</a></li>
-					
+					//testing 
 				<li class="dropdown" >
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" style="color: black;">
