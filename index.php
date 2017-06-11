@@ -37,8 +37,9 @@ else{
 	<link rel="stylesheet" type="text/css" href="stylelearning.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
-	
-	<!-- on hold check the naming -->
+	<link rel="stylesheet" type="text/css" href="letterdrop.css">
+	<link rel="stylesheet" type="text/css" href="filter.css">
+	<!-- on hold check the naming  -->
 	<!-- page refresh at see from top -->
 	<script >
 		$(document).ready(function(){
@@ -59,7 +60,7 @@ else{
 	</script>
 	<!-- navbar js -->
 	<!-- touch  this and i will kill u -->
-	<!-- <script>
+	<script>
 		$(document).ready(function(){
 			$("#navup").click(function(){
 				$(".collapse").slideUp("slow");
@@ -68,182 +69,11 @@ else{
 				$(".collapse").slideToggle("slow");
 			});
 		});
-	</script> -->
+	</script>
 	<style>
-		.subfilter{
-			display: flex;
-			flex-wrap: wrap;
-
-		}
-		.container-fluid1{
-			display: flex;
-			flex-wrap: wrap;
-
-			float: left;
-		}
-		.xyz{
-			background-color: #4CAF50; /* Green */
-			border: none;
-			color: white;
-			
-			border-radius: 0px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			
-			
-			cursor: pointer;
-			-webkit-transition-duration: 0.4s; /* Safari */
-			transition-duration: 0.4s;
-		}
-		.xyz:hover {
-			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-		} /*start of nd width 650*/
-		@media  screen  and (max-width:650px){
-			.subfilter{
-				margin-top: 100px;
-				margin-bottom: 100px;
-
-			}
-			#filter{
-				width: 100%;
-			}
-			.btn1{
-				order: 0;
-				width: 33.33%;
-			}
-			.btn2{
-				order: 1;
-				width: 33.33%;
-
-			}
-			.btn3{
-				order: 2;
-				width: 33.33%;
-			}
-			.btn4{
-				order: 3;
-				width: 100%;
-			}
-
-			.xyz{
-				padding: 8px 8px;
-				font-size: 12px;
-				margin-left: auto;margin-right: auto; margin-top: 10px;
-
-			}
-			#submitbutton2{
-				padding: 8px;
-				margin: 10px; 
-			}
-		}
-		/*end of max width 650*/
-
-
-		/*start of min width 650*/
-		@media  screen  and (min-width:650px){
-			.subfilter{
-				margin-top: 100px;
-				margin-bottom: 100px;
-			}
-			.xyz{
-				padding: 8px 8px;
-				font-size: 18px;
-				margin: 1px 0px;
-			}
-			.btn1 , .btn2 , .btn3 , .btn4 {
-				float: left;
-				padding: 1px;
-			}
-			#submitbutton2{
-				background-color: #C44242;
-				color: white;
-				margin-top: 1px;
-				border-radius: 0;
-				text-align: center;
-				padding: 6px 8px;
-				font-size: 19px;
-			}
-			#filterup{
-				width: 15%;
-				order: 0;
-			}
-			#filter{
-				margin-left: auto;
-				margin-right: auto;
-				
-				width: 70%
-				order :1;
-				
-			}
-			#filterdown{
-				width: 15%;
-				order: 2;
-			}
-		}
-		/*end of  min width of 650*/
-		/*start of max width of  350*/
-		@media  screen  and (max-width:350px){
-			.subfilter{
-				margin-top: 100px;
-				margin-bottom: 100px;
-
-			}
-			#filter{
-				width: 100%;
-			}
-			.xyz{
-				padding: 4px 4px;
-				font-size: 8px;
-
-			}
-		}
-		/*end of  max width of 350*/
-		#submitbutton2{
-			background-color: #C44242;
-			color: white;
-
-			border-style: none; 
-			
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-
-		#yui{
-			text-align: center;
-			font-size: 58px;
-			font-weight: bold;
-			margin-top: 50px;
-		}
-
+		
 		/*letter drop  style*/
-		.letterDrop {
-  position: relative;
-  top: 0.60em;  
-  display: inline-block;
-  text-transform: uppercase; 
-  letter-spacing: 0.5em;
-  opacity: 0.8;
-  transform: rotateX(-90deg);
-  animation: letterDrop 1.2s ease 1 normal forwards;
-}
-
-@keyframes letterDrop {
-    10% {
-        opacity: 0.5;
-    }
-    20% {
-        opacity: 0.8;
-        top: 3.75em;
-        transform: rotateX(-360deg);
-    }
-    100% {
-        opacity: 1;
-        top: 4.50em;
-        transform: rotateX(360deg);
-    }
-}
+		
 	</style>
 
 	
